@@ -1,0 +1,405 @@
+/* --- Sezione Caratteristiche --- */
+.carta-caratteristica {
+    background-color: #1c1c1c;
+    padding: 50px 40px;
+    text-align: center;
+    border: 1px solid #333;
+    flex: 1;
+}
+
+.decorazione-carta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: var(--accent);
+    min-height: 40px;
+}
+
+.decorazione-carta::before,
+.decorazione-carta::after {
+    content: '';
+    height: 1px;
+    width: 40px; /* Linee più corte e bilanciate */
+    background-color: var(--accent);
+    opacity: 0.4;
+}
+
+
+.decorazione-carta img {
+    width: 40px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(61%) saturate(483%) hue-rotate(359deg) brightness(88%) contrast(90%);
+}
+
+.decorazione-carta img[src*="logo-brigate"] {
+    filter: none; /* Disabilita il filtro colore solo per questa immagine */
+    width: 24px; /* Aggiustiamo la dimensione per un logo più dettagliato */
+    height: auto;
+    filter: sepia(100%);
+}
+
+
+.carta-caratteristica h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.carta-caratteristica p {
+    font-family: sans-serif;
+    color: #a0aec0;
+    line-height: 1.6;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* --- Sezione Media (Galleria) --- */
+.sezione-media {
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+.contenitore-media {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.contenitore-media h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.griglia-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.elemento-media {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #333333;
+}
+
+.elemento-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- Overlay e animazioni della galleria --- */
+.overlay-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay-media p {
+    font-family: sans-serif;
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(10px);
+    transition: transform 0.5s ease;
+}
+
+.elemento-media:hover .overlay-media {
+    opacity: 1;
+}
+
+.elemento-media:hover .overlay-media p {
+    transform: translateY(0);
+}
+
+.elemento-media:hover img {
+    transform: scale(1.1);
+}
+
+.icona-footer {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icona-svg {
+    padding: 2px;
+    color: #555555;
+    transition: color 0.3s ease, transform 0.15s ease;
+}
+
+.icona-svg:hover,
+.icona-svg:focus {
+    color: #ffffff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.icona-svg svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.social-e-piattaforme .icona-img img {
+    width: 100%;
+    height: 100%;
+    filter: invert(1) brightness(0.4);
+    transition: filter 0.3s ease, transform 0.15s ease;
+    display: block;
+}
+
+.icona-img:hover img,
+.icona-img:focus img {
+    filter: invert(1) brightness(1);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* ==========================================================================
+   PULSANTE "TORNA SU"
+   ========================================================================== */
+.pulsante-torna-su {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    
+    width: 50px;
+    height: 50px;
+    background-color: rgba(40, 40, 40, 0.9);
+    color: #c8a45c;
+    
+    border-radius: 5px;
+    border: 1px solid #c8a45c;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+
+    z-index: 100;
+}
+
+.pulsante-torna-su:hover {
+    background-color: #c8a45c;
+    color: #111111;
+}
+
+.pulsante-torna-su.visibile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.pulsante-torna-su svg {
+    width: 24px;
+    height: 24px;
+}
+
+.selettore-lingua a {
+    color: #888888;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.selettore-lingua a:hover {
+    color: #ffffff;
+}
+
+.selettore-lingua a.attivo {
+    color: #c8a45c;
+    pointer-events: none;
+}
+
+.selettore-lingua span {
+    color: #555555;
+    margin: 0 5px;
+}
+
+/* ==========================================================================
+   LIGHTBOX PER LA GALLERIA
+   ========================================================================== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox.attivo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-contenuto {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox-immagine {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: fadeInZoom 0.5s ease;
+}
+
+@keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-chiudi, .lightbox-precedente, .lightbox-prossimo {
+    position: absolute;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.lightbox-chiudi:hover, .lightbox-precedente:hover, .lightbox-prossimo:hover {
+    color: #ffffff;
+}
+
+.lightbox-chiudi { top: 20px; right: 30px; }
+.lightbox-precedente { top: 50%; left: 20px; transform: translateY(-50%); }
+.lightbox-prossimo { top: 50%; right: 20px; transform: translateY(-50%); }
+
+.feature-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 30px;
+    text-align: center;
+}
+
+.feature-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #c8a45c;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.feature-desc {
+    font-family: sans-serif;
+    color: #a0aec0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   SEZIONE RATING NEL FOOTER (SOLUZIONE DEFINITIVA)
+   ========================================================================== */
+.contenitore-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contenitore-rating img {
+    display: inline-block; /* La chiave della soluzione, grazie alla tua analisi */
+    height: 32px;
+    width: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    /* Rimuoviamo qualsiasi altra regola che potrebbe creare conflitti */
+    filter: none;
+}
+
+.contenitore-rating img:hover {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   EFFETTO FADE-IN PER IMMAGINI LAZY-LOADED
+   ========================================================================== */
+@keyframes fadeInImage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Applichiamo l'animazione a tutte le immagini nelle gallerie */
+.griglia-media img,
+.griglia-media-estesa img {
+    animation: fadeInImage 0.6s ease-out;
+}
+
+.griglia-team {
+    display: grid;
+    /* La magia è qui: crea colonne di almeno 250px e le adatta allo spazio disponibile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Spazio tra le carte */
+    max-width: 1000px; /* Limita la larghezza massima per una migliore leggibilità su schermi grandi */
+    margin: 0 auto; /* Centra la griglia */
+}
+
+.carta-membro-team {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta-membro-team:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.foto-membro-team {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%; /* Rende l'immagine circolare */
+    object-fit: cover; /* Evita che l'immagine si distorca */
+    margin: 0 auto 20px auto;
+    border: 3px solid var(--accent);
+}
+
+.nome-membro-team {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.didascalia-membro-team {
+    font-family: sans-serif;
+    color: #a0aec0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

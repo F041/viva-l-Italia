@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media - Viva l'Italia</title>
+    <meta name="description" content="Guarda la galleria di immagini, screenshot e video del videogioco VIVA L'ITALIA. Immergiti nell'atmosfera della guerriglia partigiana." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- Header: aggiorniamo i link -->
+    <header class="barra-navigazione" role="banner">
+      <nav
+        class="contenitore-nav"
+        role="navigation"
+        aria-label="Navigazione principale"
+      >
+        <a href="index.html" class="logo">VIVA L'ITALIA</a>
+        <div class="contenitore-menu-desktop" id="menu-mobile">
+          <ul class="link-navigazione">
+            <li>
+              <a href="notizie.html"
+                ><span data-i18n-key="nav_notizie">Notizie</span></a
+              >
+            </li>
+            <li>
+              <a href="il-gioco.html"
+                ><span data-i18n-key="nav_il_gioco">Il gioco</span></a
+              >
+            </li>
+            <li><a href="storia.html"><span data-i18n-key="nav_storia">Storia</span></a></li>
+            <li>
+              <a href="media.html"
+                ><span data-i18n-key="nav_media">Media</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <button
+          class="icona-menu-hamburger"
+          aria-label="Apri menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          <span></span><span></span><span></span>
+        </button>
+<a href="https://forms.gle/eDA11S8yDmqAEyX37" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="pulsante-cta">
+   <span data-i18n-key="nav_acquista">Supporta ora</span>
+</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="titolo-pagina">
+        <h1 data-i18n-key="media_page_title">Media</h1>
+      </section>
+
+      <section class="contenuto-principale">
+        <div class="griglia-media-estesa" id="galleria-contenitore"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="piede-di-pagina" role="contentinfo">
+      <div class="contenitore-footer">
+        <div class="info-legali">
+          <p data-i18n-key="footer_copyright">
+            &copy; 2025 Viva l'Italia. Tutti i diritti riservati.
+          </p>
+          <p data-i18n-key="footer_disclaimer"></p>
+        </div>
+
+        <div class="contenitore-rating">
+          <img
+            class="rating-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/PEGI_18_%282009-2010%29.svg/2048px-PEGI_18_%282009-2010%29.svg.png"
+            alt="Pegi 18"
+            title="Pegi 18"
+          />
+          <img
+            id="pegi-violence-debug"
+            src="static\img\icons\PEGI_violence.webp"
+            alt="Icona violenza"
+            title="Violenza"
+            style="
+              height: 32px;
+              width: auto;
+              display: inline-block;
+              background: #fff;
+              border: 3px solid rgb(0, 0, 0);
+            "
+          />
+        </div>
+
+        <div class="selettore-lingua">
+          <a href="#" data-lang="it">IT</a>
+          <span>|</span>
+          <a href="#" data-lang="en">EN</a>
+        </div>
+
+        <div class="social-e-piattaforme">
+          <a
+            href="https://www.tiktok.com/@vivalitalia.gioco"
+            target="_blank"
+            class="icona-footer icona-svg"
+            aria-label="Vai al profilo TikTok"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://store.steampowered.com"
+            target="_blank"
+            class="icona-footer icona-img"
+            aria-label="Vai alla pagina Steam"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
+              alt="Logo di Steam"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- NUOVA STRUTTURA HTML PER LA LIGHTBOX (aggiungere prima degli script) -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-chiudi">&times;</button>
+      <button class="lightbox-precedente">&#10094;</button>
+      <button class="lightbox-prossimo">&#10095;</button>
+      <div class="lightbox-contenuto">
+        <img src="" class="lightbox-immagine" alt="Immagine ingrandita" />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="static/js/media.js"></script>
+  </body>
+</html>

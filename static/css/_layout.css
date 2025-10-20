@@ -1,0 +1,571 @@
+/* ==========================================================================
+   BARRA DI NAVIGAZIONE (CON FALLBACK PER FIREFOX)
+   ========================================================================== */
+.barra-navigazione {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(10, 10, 10, 0.7);
+    -webkit-backdrop-filter: blur(5px); /* NUOVA RIGA PER COMPATIBILITÀ */
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Aggiunta transizione anche per l'ombra */
+    }
+
+/* Aggiungiamo l'effetto "vetro" solo se il browser lo supporta */
+@supports (backdrop-filter: blur(5px)) {
+    .barra-navigazione {
+        background-color: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(5px);
+    }
+}
+
+.barra-navigazione.scrolled {
+    background-color: rgba(10, 10, 10, 0.95); /* Leggermente più opaco per staccare meglio */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenitore-nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.contenitore-menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-navigazione {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-navigazione a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.link-navigazione a:hover,
+.link-navigazione a:focus {
+    color: #c8a45c;
+    outline: none;
+}
+
+.link-navigazione a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #c8a45c;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.link-navigazione a:hover::after,
+.link-navigazione a:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.pulsante-cta {
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pulsante-cta:hover,
+.pulsante-cta:focus {
+    background-color: #c8a45c;
+    color: #ffffff;
+    outline: none;
+}
+
+.link-navigazione a.attivo {
+    color: #c8a45c;
+}
+
+.link-navigazione a.attivo::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ==========================================================================
+   SEZIONE EROE (VERSIONE CORRETTA)
+   ========================================================================== */
+.sezione-eroe {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.sfondo-eroe {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.video-eroe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.sfondo-eroe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(to bottom, black, rgba(0,0,0,0.4), black),
+        linear-gradient(to right, rgba(0,0,0,0.7), transparent, rgba(0,0,0,0.7));
+    z-index: 1;
+}
+.sezione-eroe::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 150px 50px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.contenuto-eroe {
+    max-width: 900px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sottotitolo-superiore {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+}
+
+.titolo-cinematico {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(4.5rem, 15vw, 12rem);
+    line-height: 0.95;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+    /* 1. Immagine di sfondo */
+    background-image: 
+        /* Livello superiore: un colore semi-trasparente */
+        linear-gradient(rgba(250, 250, 250, 0.600), rgba(31, 31, 31, 0.6)),
+        /* Livello inferiore: l'immagine della bandiera */
+        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJVOssK-39zHFq8Qm2s8Q7x_1ewA4m5qEF0qh0cq8j98crr0S6Atz2RYon58sdOzbk4NPtdlnc8qzhMySvrPaEFkNVKlmyqC5V-Qdt6BbNNgQbrS-YEpTj1oQ64OEaOhXY3tbz0F55bRA/s1600/Italia.png');
+    
+    background-size: cover, 100% auto; /* 'cover' per l'overlay, '100%' per la bandiera */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 2. La "magia" per mostrare lo sfondo solo dove c'è il testo */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+
+}
+/* 4. Fallback per browser (come Firefox) che non supportano -webkit-text-stroke */
+@supports not (-webkit-text-stroke: 2px #ffffff) {
+    .titolo-cinematico {
+        -webkit-text-stroke: 0;
+        text-shadow:
+            -2px -2px 0 #fff, 2px -2px 0 #fff,
+            -2px 2px 0 #fff, 2px 2px 0 #fff,
+            0 6px 18px rgba(0,0,0,0.6);
+    }
+}
+
+
+.contenitore-tagline {
+    position: relative;
+    margin-bottom: 3.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.linea-decorativa {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(139, 115, 85, 0.7), transparent);
+    margin: 1rem auto;
+}
+
+.sottotitolo-eroe {
+    color: #EAEAEA;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+}
+
+.descrizione-eroe {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.contenitore-pulsanti-eroe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .contenitore-pulsanti-eroe {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+.pulsante-eroe {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    min-width: 200px;
+}
+
+.pulsante-eroe.primario {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+}
+.pulsante-eroe.primario:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.pulsante-eroe.secondario {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #EAEAEA;
+}
+.pulsante-eroe.secondario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+}
+
+.icona-scroll-giu {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+.icona-scroll-giu .testo-scroll {
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.icona-scroll-giu svg {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -10px); }
+    60% { transform: translate(-50%, -5px); }
+}
+
+
+/* NUOVE REGOLE PER ANIMAZIONI */
+.anim-fade-in, .anim-fade-in-up {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.anim-fade-in { animation-name: fadeIn; animation-duration: 1.5s; animation-timing-function: ease-out; }
+.anim-fade-in-up { animation-name: fadeInUp; animation-duration: 1s; animation-timing-function: ease-out; }
+
+.anim-delay-300 { animation-delay: 0.3s; }
+.anim-delay-600 { animation-delay: 0.6s; }
+.anim-delay-1200 { animation-delay: 1.2s; }
+.anim-delay-1500 { animation-delay: 1.5s; }
+.anim-delay-1800 { animation-delay: 1.8s; }
+.anim-delay-2500 { animation-delay: 2.5s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ==========================================================================
+   SEZIONI DI CONTENUTO
+   ========================================================================== */
+.sezione-contenuto {
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+.sezione-contenuto-scuro {
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.contenitore-split {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.colonna-titolo {
+    flex: 1;
+}
+.colonna-contenuto {
+    flex: 2;
+}
+
+.colonna-contenuto-griglia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenitore-split {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+@media (max-width: 1024px) {
+    .colonna-contenuto-griglia {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 1025px) {
+    .colonna-contenuto-griglia {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+.titolo-sezione-verticale {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.sfondo-pattern {
+    position: relative;
+    background-color: #1a1a1ace;
+    background-image: 
+        /* MODIFICA: Overlay molto più leggero */
+        linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)),
+        url('../img/icons/mappa-sbagliata.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+/* La quadrettatura ora si sovrappone alla mappa */
+.sfondo-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(200, 164, 92, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(200, 164, 92, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 0; /* Sta sotto il contenuto ma sopra lo sfondo */
+}
+
+.sfondo-pattern > .contenitore-pieno {
+    position: relative;
+    z-index: 1; /* Il contenuto sta sopra tutto */
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.piede-di-pagina {
+    background-color: #000000;
+    padding: 40px 0;
+    border-top: 1px solid #333333;
+}
+
+.contenitore-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-legali p {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #888888;
+    margin-bottom: 5px;
+}
+
+.social-e-piattaforme {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.piede-di-pagina {
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   ELEMENTI PAGINA STORIA (FEATURE GRID & TIMELINE)
+   ========================================================================== */
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #c8a45c;
+    left: 15px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 25px;
+}
+
+.timeline-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* NUOVO: Stile per le sezioni incorniciate */
+.sezione-incorniciata {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.sezione-incorniciata::before,
+.sezione-incorniciata::after {
+    content: '';
+    position: absolute;
+    width: var(--corner-size, 44px);
+    height: var(--corner-size, 44px);
+    border-color: var(--accent);
+    border-style: solid;
+}
+
+/* Angolo in alto a sinistra */
+.sezione-incorniciata::before {
+    top: 0;
+    left: 0;
+    border-width: var(--frame-thickness, 3px) 0 0 var(--frame-thickness, 3px);
+}
+
+/* Angolo in basso a destra */
+.sezione-incorniciata::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 var(--frame-thickness, 3px) var(--frame-thickness, 3px) 0;
+}

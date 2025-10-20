@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Il Gioco - Viva l'Italia</title>
+    <meta name="description" content="Scopri i dettagli di VIVA L'ITALIA: l'approccio storico rispettoso, le meccaniche di gameplay e i requisiti di sistema per PC." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="barra-navigazione" role="banner">
+      <nav
+        class="contenitore-nav"
+        role="navigation"
+        aria-label="Navigazione principale"
+      >
+        <a href="index.html" class="logo">VIVA L'ITALIA</a>
+        <div class="contenitore-menu-desktop" id="menu-mobile">
+          <ul class="link-navigazione">
+            <li>
+              <a href="notizie.html"
+                ><span data-i18n-key="nav_notizie">Notizie</span></a
+              >
+            </li>
+            <li>
+              <a href="il-gioco.html"
+                ><span data-i18n-key="nav_il_gioco">Il gioco</span></a
+              >
+            </li>
+            <li><a href="storia.html"><span data-i18n-key="nav_storia">Storia</span></a></li>
+            <li>
+              <a href="media.html"
+                ><span data-i18n-key="nav_media">Media</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <button
+          class="icona-menu-hamburger"
+          aria-label="Apri menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          <span></span><span></span><span></span>
+        </button>
+<a href="https://forms.gle/eDA11S8yDmqAEyX37" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="pulsante-cta">
+   <span data-i18n-key="nav_acquista">Supporta ora</span>
+</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="titolo-pagina">
+        <h1 data-i18n-key="game_page_title">Il Gioco</h1>
+      </section>
+
+      <!-- Sezione di introduzione e precisazione -->
+      <section class="contenuto-principale">
+        
+        <!-- Blocco 1: Approccio Storico -->
+        <div class="articolo">
+          <h2 data-i18n-key="game_s1_title">Un Approccio Storico Rispettoso</h2>
+          <p data-i18n-key="game_s1_text1">
+            <em>Viva l'Italia</em> è un'esperienza stealth tattica in prima
+            persona che si prefigge di esplorare il periodo della Resistenza
+            italiana con il massimo rispetto per la sua complessità storica e
+            umana. Il nostro obiettivo è creare un'opera interattiva matura,
+            storicamente informata e lontana da ogni retorica superficiale o
+            controversa.
+          </p>
+          <p data-i18n-key="game_s1_text2">
+            Non si tratta di una glorificazione della violenza, ma di una
+            riflessione sulle scelte difficili, sul coraggio e
+            sull'organizzazione di uomini e donne che hanno combattuto per la
+            libertà. Il gameplay, incentrato sull'infiltrazione e la strategia,
+            vuole premiare l'astuzia, la pianificazione, e occasionalmente l'audacia.
+          </p>
+        </div>
+
+        <!-- Blocco 2: Confronto con Gioventù Ribelle -->
+        <div class="articolo hidden">
+          <blockquote>
+            <p data-i18n-key="game_s1_5_quote">Un altro "Gioventù Ribelle"?!</p>
+          </blockquote>
+          <p data-i18n-key="game_s1_5_text1">
+            Scetticismo accolto. Per chi non lo conoscesse, <em>"Gioventù Ribelle"</em> è stato un videogioco del 2011 legato alle celebrazioni per i 150 anni dell'Unità d'ITALIA, ma il suo sviluppo lo hanno reso una <a href=https://www.youtube.com/watch?v=wF4P3jiHED4 target=\"_blank\">vergogna internazionale</a>.
+          </p>
+          <p data-i18n-key="game_s1_5_text2">
+            <strong>VIVA L'ITALIA nasce dalla passione.</strong> Non si tratta di un progetto istituzionale o una demo studentesca, ma un'opera indipendente. Il gioco vuole onorare la storia e non far ripetere un deja vu italico.
+          </p>
+        </div>
+
+        <!-- NUOVO BLOCCO: Onestà sui limiti -->
+        <div class="articolo hidden">
+            <h2 data-i18n-key="game_s3_title">Però VIVA L'ITALIA avrà dei brutti punti in comune con <em>"Gioventù Ribelle"</em></h2>
+            <p data-i18n-key="game_s3_text1">Saremo diretti: non aspettatevi la grafica di un doppio A. Le nostre risorse sono limitate. Aspettati una grafica vecchia di almeno 10 anni. L'energia è stata investita in caratteristiche del gioco 'meno aggiornabili' dei poligoni.</p>
+            <p data-i18n-key="game_s3_text2">Avrà delle storpiature storiche per adattare la giocabilità ed evitare di renderlo un <em>walking simulator</em>.</p>
+        </div>
+
+
+        
+
+        <!-- Blocco 4: Requisiti di Sistema -->
+        <div class="articolo hidden">
+          <h2 data-i18n-key="game_s2_title">Requisiti di Sistema (PC)</h2>
+          <div class="tabella-requisiti">
+            <div class="colonna-requisiti">
+              <h3 data-i18n-key="game_req_min">Minimi</h3>
+              <ul>
+                <li>
+                  <strong>OS:</strong>
+                  <span data-i18n-key="game_req_os">Windows 10 64-bit</span>
+                </li>
+                <li>
+                  <strong>Processore:</strong>
+                  <span>Intel Core i5-4460 / AMD FX-8350</span>
+                </li>
+                <li><strong>Memoria:</strong> <span>6 GB RAM</span></li>
+                <li>
+                  <strong>Scheda video:</strong>
+                  <span>NVIDIA GTX 760 / AMD Radeon R9 270X</span>
+                </li>
+                <li>
+                  <strong>Spazio su disco:</strong>
+                  <span data-i18n-key="game_req_disk"
+                    >10 GB di spazio disponibile</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="colonna-requisiti">
+              <h3 data-i18n-key="game_req_rec">Consigliati</h3>
+              <ul>
+                <li>
+                  <strong>OS:</strong>
+                  <span data-i18n-key="game_req_os">Windows 10 64-bit</span>
+                </li>
+                <li>
+                  <strong>Processore:</strong>
+                  <span>Intel Core i7-4790 / AMD Ryzen 5 1600</span>
+                </li>
+                <li><strong>Memoria:</strong> <span>12 GB RAM</span></li>
+                <li>
+                  <strong>Scheda video:</strong>
+                  <span>NVIDIA GTX 1060 / AMD Radeon RX 580</span>
+                </li>
+                <li>
+                  <strong>Spazio su disco:</strong>
+                  <span data-i18n-key="game_req_disk_ssd"
+                    >10 GB di spazio disponibile (SSD consigliato)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="piede-di-pagina" role="contentinfo">
+      <div class="contenitore-footer">
+        <div class="info-legali">
+          <p data-i18n-key="footer_copyright">
+            &copy; 2025 Viva l'Italia. Tutti i diritti riservati.
+          </p>
+          <p data-i18n-key="footer_disclaimer"></p>
+        </div>
+
+        <div class="contenitore-rating">
+          <img
+            class="rating-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/PEGI_18_%282009-2010%29.svg/2048px-PEGI_18_%282009-2010%29.svg.png"
+            alt="Pegi 18"
+            title="Pegi 18"
+          />
+          <img
+            id="pegi-violence-debug"
+            src="static\img\icons\PEGI_violence.webp"
+            alt="Icona violenza"
+            title="Violenza"
+            style="
+              height: 32px;
+              width: auto;
+              display: inline-block;
+              background: #fff;
+              border: 3px solid rgb(0, 0, 0);
+            "
+          />
+        </div>
+
+        <div class="selettore-lingua">
+          <a href="#" data-lang="it">IT</a>
+          <span>|</span>
+          <a href="#" data-lang="en">EN</a>
+        </div>
+
+        <div class="social-e-piattaforme">
+          <a
+            href="https://www.tiktok.com/@vivalitalia.gioco"
+            target="_blank"
+            class="icona-footer icona-svg"
+            aria-label="Vai al profilo TikTok"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://store.steampowered.com"
+            target="_blank"
+            class="icona-footer icona-img"
+            aria-label="Vai alla pagina Steam"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
+              alt="Logo di Steam"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+/* ==========================================================================
+   CONFIGURAZIONE GLOBALE E RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --accent: #c8a45c;        /* colore dorato */
+  --accent-soft: rgba(200,164,92,0.12);
+  --rosso-evidenziato: #b73737; /* NUOVO: colore rosso per i punti critici */
+  --frame-thickness: 3px;
+  --corner-size: 44px;
+  --corner-gap: 40px;      /* distanza dal bordo sinistro/destra */
+  --frame-z: 2;
+  --decor-opacity: 0.08;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #111111;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.menu-aperto {
+    overflow: hidden;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%; /* disabilita il text auto-zoom su iOS */
+  touch-action: manipulation;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* garantisce almeno l'altezza della viewport */
+  padding-top: calc(var(--nav-height, 65px) + 10px);
+}
+
+main {
+  flex: 1 0 auto; /* flex-grow:1, flex-shrink:0, flex-basis:auto */
+}
+
+.sezione-eroe,
+.contenuto-principale {
+  min-height: 0;
+}
+
+.testo-accento {
+    color: var(--accent);
+}
+
+body {
+    /* Il percorso deve essere relativo alla posizione del file CSS */
+    cursor: url('../img/icons/cursor-default.svg') 12 12, auto;
+}
+
+a, button, .pulsante-cta, .elemento-media, .pulsante-minigioco {
+    /* Il "12 12" centra l'SVG sul punto del click */
+    cursor: url('../img/icons/cursor-pointer.svg') 12 12, pointer;
+}

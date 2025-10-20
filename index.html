@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viva l'Italia - Sito Ufficiale</title>
+    <meta
+      name="description"
+      content="Sito ufficiale di VIVA L'ITALIA, un gioco stealth tattico sulla Resistenza italiana. Scopri il gameplay, la storia e supporta lo sviluppo."
+    />
+    <meta property="og:title" content="Viva l'Italia - Sito Ufficiale" />
+    <meta property="og:description" content="Un gioco stealth tattico sulla Resistenza italiana. Scopri il gameplay, la storia e supporta lo sviluppo." />  
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- Pulsante "Torna Su" -->
+    <a href="#" class="pulsante-torna-su">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24"
+        fill="currentColor"
+      >
+        <path
+          d="M13 19V11L16.5 14.5L17.9 13.1L12 7.2L6.1 13.1L7.5 14.5L11 11V19H13Z"
+        />
+      </svg>
+    </a>
+
+    <!-- Barra di Navigazione -->
+    <header class="barra-navigazione" role="banner">
+      <nav
+        class="contenitore-nav"
+        role="navigation"
+        aria-label="Navigazione principale"
+      >
+        <a href="#" class="logo">VIVA L'ITALIA</a>
+
+        <div class="contenitore-menu-desktop" id="menu-mobile">
+          <ul class="link-navigazione">
+            <li>
+              <a href="notizie.html"
+                ><span data-i18n-key="nav_notizie">Notizie</span></a
+              >
+            </li>
+            <li>
+              <a href="il-gioco.html"
+                ><span data-i18n-key="nav_il_gioco">Il gioco</span></a
+              >
+            </li>
+            <li>
+              <a href="storia.html"
+                ><span data-i18n-key="nav_storia">Storia</span></a
+              >
+            </li>
+            <li>
+              <a href="media.html"
+                ><span data-i18n-key="nav_media">Media</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="icona-menu-hamburger"
+          aria-label="Apri menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+<a href="https://forms.gle/eDA11S8yDmqAEyX37" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="pulsante-cta">
+   <span data-i18n-key="nav_acquista">Supporta ora</span>
+</a>
+      </nav>
+    </header>
+
+    <!-- Contenuto Principale della Pagina -->
+    <main>
+      <!-- SEZIONE EROE -->
+      <section class="sezione-eroe">
+        <div class="sfondo-eroe">
+          <video autoplay muted loop playsinline class="video-eroe">
+            <source
+              src="https://assets.mixkit.co/videos/4132/4132-720.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="contenuto-eroe">
+          <p class="sottotitolo-superiore anim-fade-in anim-delay-300">
+            PIEMONTE, 1943-1945
+          </p>
+          <h1 class="titolo-cinematico anim-fade-in-up anim-delay-600">
+            VIVA<br />L'ITALIA
+          </h1>
+          <div class="contenitore-tagline anim-fade-in anim-delay-1200">
+            <div class="linea-decorativa"></div>
+            <p class="sottotitolo-eroe" data-i18n-key="hero_subtitle">
+              La resistenza ha inizio.
+            </p>
+            <div class="linea-decorativa"></div>
+          </div>
+          <p
+            class="descrizione-eroe anim-fade-in anim-delay-1500"
+            data-i18n-key="hero_description"
+          >
+            Un gioco stealth tattico che ti porta nel cuore della guerriglia
+            partigiana. Ogni proiettile conta. Ogni decisione ha un peso. Ogni
+            vittoria costruisce la speranza.
+          </p>
+          <div
+            class="contenitore-pulsanti-eroe anim-fade-in-up anim-delay-1800"
+          >
+            <a
+              a
+              href="index.html#supporto"
+              class="pulsante-eroe primario"
+              data-i18n-key="hero_cta_primary"
+              >Entra in brigata</a
+            >
+            <a
+              href="storia.html"
+              class="pulsante-eroe secondario"
+              data-i18n-key="hero_cta_secondary"
+              >Scopri di più</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="filosofia" class="sezione-contenuto-scuro sfondo-pattern">
+        <div class="contenitore-pieno hidden">
+          <h2 class="titolo-sezione-interna" data-i18n-key="philosophy_title">
+            LA GUERRIGLIA NON È IMPROVVISAZIONE.<br />È UNA SCIENZA.
+          </h2>
+          <div class="colonna-testo">
+            <p data-i18n-key="philosophy_text_1">
+              In troppi giochi, la guerriglia è ridotta a un'azione caotica. Noi
+              crediamo sia l'esatto opposto: una forma di lotta intelligente.
+              Non basta vincere uno scontro; devi guadagnare il supporto della
+              popolazione, gestire risorse scarse e trasformare volontari in una
+              forza organizzata.
+            </p>
+            <blockquote class="articolo">
+              <p data-i18n-key="philosophy_quote">
+                "I partigiani sono nel paese come il pesce nel fiume. Il fiume
+                può vivere senza pesci, ma i pesci no."
+              </p>
+            </blockquote>
+            <p data-i18n-key="philosophy_text_2">
+              Questo non è solo un gioco stealth. È un gioco sulla creazione di
+              un movimento. Le tue azioni determineranno se il "fiume" ti
+              sosterrà o ti abbandonerà.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="il-problema" class="sezione-contenuto">
+        <div class="contenitore-pieno hidden">
+          <h2 class="titolo-sezione-interna">
+            SEI STANCO DEL<br /><span class="testo-distruttivo"
+              >SOLITO STEALTH?</span
+            >
+          </h2>
+          <div class="contenitore-punti-dolore">
+            <div class="punto-dolore delay-200">
+              <div class="contenuto-punto-dolore">
+                <div class="titolo-punto-dolore">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                  <h3 data-i18n-key="pain1_title">
+                    EROE SOLITARIO SENZA CONSEGUENZE?
+                  </h3>
+                </div>
+                <p data-i18n-key="pain1_text">
+                  Molti giochi stealth ti trasformano in un agente inarrestabile
+                  le cui azioni, per quanto spettacolari, non hanno un impatto
+                  reale sul mondo. Sei un fantasma le cui vittorie e sconfitte
+                  non lasciano traccia.
+                </p>
+              </div>
+            </div>
+            <div class="punto-dolore delay-400">
+              <div class="contenuto-punto-dolore">
+                <div class="titolo-punto-dolore">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                  <h3 data-i18n-key="pain2_title">
+                    INFILTRAZIONE O SPARATORIA?
+                  </h3>
+                </div>
+                <p data-i18n-key="pain2_text">
+                  Spesso, un singolo errore trasforma una missione tattica in un
+                  caotico sparatutto. Non c'è spazio per l'adattamento o per una
+                  fuga strategica. La tensione è artificiale, basata sulla paura
+                  del fallimento istantaneo.
+                </p>
+              </div>
+            </div>
+            <div class="punto-dolore delay-600">
+              <div class="contenuto-punto-dolore">
+                <div class="titolo-punto-dolore">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                  <h3 data-i18n-key="pain3_title">LIVELLI SUI BINARI?</h3>
+                </div>
+                <p data-i18n-key="pain3_text">
+                  Troppi livelli stealth sono puzzle con un'unica soluzione
+                  corretta. La creatività è limitata e la rigiocabilità quasi
+                  assente. Una volta scoperta la "via giusta", l'esperienza
+                  perde ogni sfida e sorpresa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="la-soluzione" class="sezione-contenuto-scuro">
+        <div class="contenitore-pieno hidden">
+          <h2 class="titolo-sezione-interna" data-i18n-key="solution_title">
+            VIVA L'ITALIA RISPONDE CON I PRINCIPI DELLA GUERRIGLIA
+          </h2>
+          <div class="colonna-contenuto-griglia">
+            <div class="carta-caratteristica">
+              <div class="decorazione-carta">
+                <img
+                  src="static/img/icons/icona-stealth.webp"
+                  alt="Icona resa e infiltrazione"
+                />
+              </div>
+              <h3 data-i18n-key="feature1_title">Stealth Tattico e Resa</h3>
+              <p data-i18n-key="feature1_text">
+                Sfrutta l'ambiente e le posture. Muoviti prono o accovacciato
+                per ridurre la visibilità e sorprendi i nemici alle spalle per
+                neutralizzarli in silenzio o per intimare la resa, ottenendo
+                informazioni preziose.
+              </p>
+            </div>
+            <div class="carta-caratteristica">
+              <div class="decorazione-carta">
+                <img
+                  src="static/img/icons/icona-risorse.webp"
+                  alt="Icona creazione e gestione risorse"
+                />
+              </div>
+              <h3 data-i18n-key="feature2_title">Gestione e Creazione</h3>
+              <p data-i18n-key="feature2_text">
+                Ogni risorsa è vitale. Recupera armi e munizioni dai nemici, ma
+                fai attenzione al peso trasportabile. Usa i materiali raccolti
+                nel tuo rifugio per creare equipaggiamento essenziale. Ogni
+                proiettile conta davvero.
+              </p>
+            </div>
+            <div class="carta-caratteristica">
+              <div class="decorazione-carta">
+                <img
+                  src="static/img/icons/logo-brigate.webp"
+                  alt="Logo Brigate Garibaldi"
+                />
+              </div>
+              <h3 data-i18n-key="feature3_title">Crescita della Brigata</h3>
+              <p data-i18n-key="feature3_text">
+                La tua brigata è la tua forza. Nel rifugio, gestisci l'arsenale,
+                pianifica le missioni e scegli i compagni giusti da portare con
+                te. Le tue decisioni e i tuoi successi attireranno nuove
+                reclute.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="missione-zero" class="sezione-contenuto">
+        <div class="contenitore-split-verticale hidden">
+          <div class="colonna-testo-missione">
+            <p class="sopratitolo-missione" data-i18n-key="m0_subtitle">
+              OPERAZIONE 01 // IVREA
+            </p>
+            <h2 class="titolo-missione" data-i18n-key="m0_title">
+              IL COMMISSARIATO
+            </h2>
+            <p class="testo-missione" data-i18n-key="m0_text1">
+              La Resistenza inizia con un atto di disobbedienza. La tua prima
+              missione ti porta nel cuore di Ivrea, di notte. L'obiettivo: il
+              commissariato di polizia. Dopo il rifiuto del maresciallo di
+              consegnare le armi, l'unica via è prendersele con la forza.
+            </p>
+            <blockquote data-i18n-key="m0_quote">
+              "Il maresciallo ha direttive dal governo Badoglio. Non ci darà
+              nulla. Se vogliamo i fucili, dobbiamo entrare e prenderli noi."
+            </blockquote>
+            <p class="testo-missione" data-i18n-key="m0_text2">
+              Infiltrati, trova l'armeria e recupera le armi necessarie per la
+              tua neonata brigata. Ma fa' attenzione: ogni rumore potrebbe
+              allertare le guardie. Questo non è un assalto, è un'operazione
+              chirurgica.
+            </p>
+          </div>
+          <div class="colonna-immagine-missione">
+            <img
+              loading="lazy"
+              src="static/img/ivrea_notte.webp"
+              alt="Vicolo buio di una città di notte"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="poligono-tiro" class="sezione-contenuto">
+        <div class="contenitore-pieno hidden">
+          <h2
+            class="titolo-sezione-interna"
+            data-i18n-key="shooting_gallery_title"
+          >
+            METTITI ALLA PROVA
+          </h2>
+          <p
+            class="descrizione-minigioco"
+            data-i18n-key="shooting_gallery_desc"
+          >
+            Prendi la mira e colpisci i bersagli. Ricorda: ogni proiettile
+            conta.
+          </p>
+          <div class="contenitore-canvas-gioco">
+            <!-- Overlay per la schermata iniziale -->
+            <div class="minigioco-overlay" id="minigioco-start-screen">
+              <div class="minigioco-overlay-contenuto">
+                <h3 class="minigioco-titolo">MISSIONE</h3>
+                <p class="minigioco-istruzioni">
+                  Elimina le guardie senza farti scoprire.<br />
+                  Usa le ombre a tuo vantaggio.
+                </p>
+                <button class="pulsante-minigioco" id="minigioco-start-button">
+                  INIZIA
+                </button>
+              </div>
+            </div>
+            <canvas id="gioco-3d-canvas"></canvas>
+          </div>
+          <p class="disclaimer-minigioco" data-i18n-key="minigame_disclaimer">
+            La grafica e le meccaniche non rappresentano la qualità finale del
+            gioco.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sezione Media (Galleria) -->
+      <section id="media" class="sezione-media">
+        <div class="contenitore-caratteristiche hidden sezione-incorniciata">
+          <h2 data-i18n-key="gallery_title">Galleria</h2>
+          <div class="griglia-media">
+            <div class="elemento-media">
+              <img
+                loading="lazy"
+                src="media/Rimella.webp"
+                alt="Rimella, una sede del  il comando partigiano della brigata “Gramsci”"
+              />
+              <div class="overlay-media">
+                <p data-i18n-key="gallery_img1_caption">
+                  Rimella, una sede del il comando partigiano della brigata
+                  “Gramsci”
+                </p>
+              </div>
+            </div>
+            <div class="elemento-media">
+              <img
+                loading="lazy"
+                src="https://live.staticflickr.com/5450/7488741334_038a7c52d8_b.jpg"
+                alt="Gruppo di partigiani in una radura"
+              />
+              <div class="overlay-media">
+                <p data-i18n-key="gallery_img2_caption">
+                  Gruppo di partigiani in una radura
+                </p>
+              </div>
+            </div>
+            <div class="elemento-media">
+              <img
+                loading="lazy"
+                src="https://live.staticflickr.com/7253/7488739536_0633787a29_b.jpg"
+                alt="Partigiano in vedetta"
+              />
+              <div class="overlay-media">
+                <p data-i18n-key="gallery_img3_caption">
+                  Partigiano in vedetta
+                </p>
+              </div>
+            </div>
+            <div class="elemento-media">
+              <img
+                loading="lazy"
+                src="https://live.staticflickr.com/7112/7488738980_3c5c99a759_b.jpg"
+                alt="Partigiani attraversano un campo innevato"
+              />
+              <div class="overlay-media">
+                <p data-i18n-key="gallery_img4_caption">
+                  Partigiani attraversano un campo innevato
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="sezione-contenuto">
+        <div class="contenitore-pieno hidden">
+          <h2 class="titolo-sezione-interna" data-i18n-key="team_title">
+            SQUADRA DI SVILUPPO
+          </h2>
+
+          <!-- La griglia che si adatterà automaticamente -->
+          <div class="griglia-team">
+            <!-- Carta Membro 1 -->
+            <article class="carta-membro-team">
+              <img
+                src="static/img/gabriele.webp"
+                alt="Foto di Gabriele Giordano"
+                class="foto-membro-team"
+              />
+              <h3 class="nome-membro-team">Gabriele Giordano</h3>
+              <p
+                class="didascalia-membro-team"
+                data-i18n-key="team_member1_caption"
+              >
+                Appassionato di scienza, storia, statistica.
+              </p>
+            </article>
+
+            <!-- Futuri membri verranno aggiunti qui, copiando la struttura <article>...</article> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="supporto" class="sezione-contenuto-scuro">
+        <div class="contenitore-pieno hidden">
+          <h2 class="titolo-sezione-interna" data-i18n-key="support_title">
+            FINANZIA LA RESISTENZA
+          </h2>
+          <div class="barra-finanziamento-contenitore">
+            <div class="barra-finanziamento-testo" id="barra-testo">0€</div>
+            <div
+              class="barra-finanziamento-progresso"
+              id="barra-progresso"
+            ></div>
+    <div class="milestone" style="left: 0.005%" data-i18n-key="milestone_1">
+      <span>100€<br><small>Pubblicazione su Steam</small></span>
+    </div>
+    <div class="milestone milestone-sotto" style="left: 2.5%" data-i18n-key="milestone_2">
+      <span>50K€<br><small>Creazione colonna sonora</small></span>
+    </div>
+    <div class="milestone" style="left: 10%" data-i18n-key="milestone_3">
+      <span>200K€<br><small>Miglioramento modelli 3D</small></span>
+    </div>
+    <div class="milestone" style="left: 25%" data-i18n-key="milestone_3b">
+      <span>500K€<br><small>Doppiaggio professionale</small></span>
+    </div>
+    <div class="milestone milestone-verticale" style="left: 50%" data-i18n-key="milestone_4">
+      <span>1M€<br><small>Espansione: le 4 giornate di Napoli con i femminielli</small></span>
+    </div>
+    <div class="milestone" style="left: 100%" data-i18n-key="milestone_5">
+      <span>2M€<br><small>Supporto mod</small></span>
+    </div>
+</div>
+          <div class="contatore-soldi" id="contatore-soldi">Caricamento...</div>
+          <p class="testo-supporto" data-i18n-key="support_text">
+            "VIVA L'ITALIA" è un progetto indipendente alimentato dalla
+            passione. Ogni contributo, grande o piccolo, ci aiuta a dedicare più
+            tempo e risorse allo sviluppo, migliorando la qualità del gioco e
+            aggiungendo nuovi contenuti. Il tuo supporto è il nostro carburante.
+          </p>
+
+
+          <p class="testo-prezzo-scontato" data-i18n-key="support_price_info">
+            Fino all'uscita nel 2027, puoi supportare lo sviluppo al prezzo
+            speciale di <strong>19,43€</strong>. Al lancio, il prezzo finale
+            sarà di <strong>25,04€</strong>.
+          </p>
+
+          <div class="contenitore-pulsante-supporto">
+            <a
+              href="https://forms.gle/eDA11S8yDmqAEyX37"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pulsante-cta-supporto"
+              data-i18n-key="support_cta"
+              >Contribuisci Ora</a
+            >
+          </div>
+
+          <p
+            class="testo-contributi-alternativi"
+            data-i18n-key="support_alt_contribution"
+          >
+            Vuoi contribuire in altri modi? Siamo sempre alla ricerca di artisti
+            3D, musicisti, e doppiatori.
+            <a href="mailto:info.vivalitalia@gmail.com">Contattaci</a>!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="piede-di-pagina" role="contentinfo">
+      <div class="contenitore-footer">
+        <div class="info-legali">
+          <p data-i18n-key="footer_copyright">
+            &copy; 2025 Viva l'Italia. Tutti i diritti riservati.
+          </p>
+          <p data-i18n-key="footer_disclaimer"></p>
+        </div>
+
+        <div class="contenitore-rating">
+          <img
+            class="rating-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/PEGI_18_%282009-2010%29.svg/2048px-PEGI_18_%282009-2010%29.svg.png"
+            alt="Pegi 18"
+            title="Pegi 18"
+          />
+          <img
+            id="pegi-violence-debug"
+            src="static\img\icons\PEGI_violence.webp"
+            alt="Icona violenza"
+            title="Violenza"
+            style="
+              height: 32px;
+              width: auto;
+              display: inline-block;
+              background: #fff;
+              border: 3px solid rgb(0, 0, 0);
+            "
+          />
+        </div>
+
+        <div class="selettore-lingua">
+          <a href="#" data-lang="it">IT</a>
+          <span>|</span>
+          <a href="#" data-lang="en">EN</a>
+        </div>
+
+        <div class="social-e-piattaforme">
+          <a
+            href="https://www.tiktok.com/@vivalitalia.gioco"
+            target="_blank"
+            class="icona-footer icona-svg"
+            aria-label="Vai al profilo TikTok"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://store.steampowered.com"
+            target="_blank"
+            class="icona-footer icona-img"
+            aria-label="Vai alla pagina Steam"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
+              alt="Logo di Steam"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="static/js/script.js"></script>
+    <script src="static/js/support.js"></script>
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="static/js/minigame.js"></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Storia - Viva l'Italia</title>
+    <meta name="description" content="Approfondisci il contesto storico di VIVA L'ITALIA. Esplora la timeline degli eventi chiave della Resistenza italiana tra il 1943 e il 1945." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="barra-navigazione" role="banner">
+      <nav
+        class="contenitore-nav"
+        role="navigation"
+        aria-label="Navigazione principale"
+      >
+        <a href="index.html" class="logo">VIVA L'ITALIA</a>
+        <div class="contenitore-menu-desktop" id="menu-mobile">
+          <ul class="link-navigazione">
+            <li><a href="notizie.html"><span data-i18n-key="nav_notizie">Notizie</span></a></li>
+            <li><a href="il-gioco.html"><span data-i18n-key="nav_il_gioco">Il gioco</span></a></li>
+            <li><a href="storia.html"><span data-i18n-key="nav_storia">Storia</span></a></li>
+            <li><a href="media.html"><span data-i18n-key="nav_media">Media</span></a></li>
+          </ul>
+        </div>
+        <button
+          class="icona-menu-hamburger"
+          aria-label="Apri menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          <span></span><span></span><span></span>
+        </button>
+<a href="https://forms.gle/eDA11S8yDmqAEyX37" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="pulsante-cta">
+   <span data-i18n-key="nav_acquista">Supporta ora</span>
+</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="titolo-pagina">
+        <h1 data-i18n-key="story_page_title">La Storia</h1>
+      </section>
+
+      <!-- SEZIONE TIMELINE STORICA CORRETTA -->
+      <section class="sezione-contenuto-scuro">
+        <h2 class="titolo-sezione-interna" data-i18n-key="story_timeline_title">Contesto Storico: 1943-1945</h2>
+        
+        <!-- OGNI ELEMENTO CHE DEVE APPARIRE SINGOLARMENTE HA LA CLASSE "hidden" -->
+        <div class="timeline"> 
+          <div class="timeline-item hidden">
+            <div class="timeline-content">
+              <h3 class="timeline-title" data-i18n-key="story_tl1_title">SETTEMBRE 1943: Nascita della Resistenza</h3>
+              <p data-i18n-key="story_tl1_desc">Dopo l'armistizio dell'8 Settembre, l'esercito italiano si dissolve. Le forze tedesche occupano il paese, dando inizio a due anni di brutale occupazione e guerra civile. I primi gruppi partigiani si formano spontaneamente sulle montagne piemontesi.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item hidden">
+            <div class="timeline-content">
+              <h3 class="timeline-title" data-i18n-key="story_tl2_title">SETTEMBRE-OTTOBRE 1944: La Repubblica dell'Ossola</h3>
+              <p data-i18n-key="story_tl2_desc">In un'audace offensiva, le forze partigiane liberano completamente la Val d'Ossola. Per 40 giorni, la zona diventa un territorio libero, un'esperienza democratica e un simbolo di speranza per tutta l'ITALIA occupata.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item hidden">
+            <div class="timeline-content">
+              <h3 class="timeline-title" data-i18n-key="story_tl3_title">APRILE 1945: Liberazione</h3>
+              <p data-i18n-key="story_tl3_desc">Mentre le forze alleate sfondano la Linea Gotica, il Comitato di Liberazione Nazionale ordina l'insurrezione generale. Le brigate partigiane, ormai un vero e proprio esercito, liberano le principali città del Nord ITALIA prima dell'arrivo degli Alleati.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="piede-di-pagina" role="contentinfo">
+      <div class="contenitore-footer">
+        <div class="info-legali">
+          <p data-i18n-key="footer_copyright">
+            &copy; 2025 Viva l'Italia. Tutti i diritti riservati.
+          </p>
+          <p data-i18n-key="footer_disclaimer"></p>
+        </div>
+
+        <div class="contenitore-rating">
+          <img
+            class="rating-logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/PEGI_18_%282009-2010%29.svg/2048px-PEGI_18_%282009-2010%29.svg.png"
+            alt="Pegi 18"
+            title="Pegi 18"
+          />
+          <img
+            id="pegi-violence-debug"
+            src="static\img\icons\PEGI_violence.webp"
+            alt="Icona violenza"
+            title="Violenza"
+            style="
+              height: 32px;
+              width: auto;
+              display: inline-block;
+              background: #fff;
+              border: 3px solid rgb(0, 0, 0);
+            "
+          />
+        </div>
+
+        <div class="selettore-lingua">
+          <a href="#" data-lang="it">IT</a>
+          <span>|</span>
+          <a href="#" data-lang="en">EN</a>
+        </div>
+
+        <div class="social-e-piattaforme">
+          <a
+            href="https://www.tiktok.com/@vivalitalia.gioco"
+            target="_blank"
+            class="icona-footer icona-svg"
+            aria-label="Vai al profilo TikTok"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://store.steampowered.com"
+            target="_blank"
+            class="icona-footer icona-img"
+            aria-label="Vai alla pagina Steam"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg"
+              alt="Logo di Steam"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Viene caricato solo script.js, che contiene già TUTTA la logica necessaria -->
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

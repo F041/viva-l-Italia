@@ -1,0 +1,255 @@
+/* ==========================================================================
+   ANIMAZIONI ALLO SCORRIMENTO
+   ========================================================================== */
+@keyframes kenburns-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, filter 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Ritardi scaglionati */
+.contenitore .colonna-immagine { transition-delay: 200ms; }
+.carta-caratteristica:nth-child(2) { transition-delay: 200ms; }
+.carta-caratteristica:nth-child(3) { transition-delay: 400ms; }
+.elemento-media:nth-child(2) { transition-delay: 200ms; }
+.elemento-media:nth-child(3) { transition-delay: 400ms; }
+.elemento-media:nth-child(4) { transition-delay: 600ms; }
+
+/* ==========================================================================
+   DESIGN RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .contenitore-nav, .contenitore, .contenitore-caratteristiche, .contenitore-media, .contenitore-footer {
+        padding: 0 30px;
+    }
+    .griglia-media { gap: 15px; }
+}
+
+/* --- Accessibilità e Hamburger --- */
+a:focus, button:focus {
+    outline: 3px solid rgba(200, 164, 92, 0.35);
+    outline-offset: 2px;
+}
+
+.icona-menu-hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    padding: 0;
+}
+
+.icona-menu-hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.25s ease-in-out;
+}
+
+.icona-menu-hamburger.attivo span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.icona-menu-hamburger.attivo span:nth-child(2) { opacity: 0; }
+.icona-menu-hamburger.attivo span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Responsive per la tabella */
+@media (max-width: 768px) {
+    .tabella-requisiti {
+        grid-template-columns: 1fr; /* Una colonna su mobile */
+    }
+}
+
+/* =========================
+   MOBILE RECOVERY (per iPhone 375x812 e simili)
+   ========================= */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile specifico: mostra l'hamburger e comportamenti sicuri */
+@media (max-width: 921px) { /* Aumentato breakpoint per coerenza con la nav */
+  .icona-menu-hamburger {
+    display: flex;
+    z-index: 9999;
+    position: relative;
+    background: transparent;
+  }
+
+  .contenitore-menu-desktop {
+    display: none;
+  }
+
+  .contenitore-menu-desktop.attivo {
+    display: flex;
+    position: fixed;
+    top: 0; /* Parte dall'alto */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Occupa tutto lo schermo */
+    height: 100vh;
+    background-color: rgba(10,10,10,0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px; /* Spazio tra i link */
+    padding: 24px;
+    z-index: 9998;
+    overflow-y: auto;
+  }
+
+  .contenitore-menu-desktop.attivo .link-navigazione {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+}
+
+/* piccolo fix per vh su iOS (usa la var --vh impostata via JS) */
+.sezione-eroe {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* =========================
+   FIX: impilare le carte su mobile
+   ========================= */
+
+@media (max-width: 768px) {
+  .contenitore-caratteristiche {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .carta-caratteristica {
+    width: 100%;
+  }
+
+  .colonna-testo, .colonna-immagine {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FIX HERO + FOOTER - mobile
+   ========================= */
+
+@media (max-width: 768px) {
+  .contenitore-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Aumentato gap */
+  }
+
+  .info-legali { order: 3; } /* Copyright in fondo */
+  .selettore-lingua { order: 2; }
+  .contenitore-rating { order: 2; }
+  .social-e-piattaforme { order: 1; } /* Social in cima */
+
+  .icona-footer {
+    width: 32px; /* Leggermente più grandi */
+    height: 32px;
+  }
+}
+
+.contenitore, .contenitore-caratteristiche, .contenitore-media, .contenitore-footer, .contenitore-nav, .contenitore-pieno, .contenitore-split-verticale {
+  padding-inline: clamp(1rem, 4vw, 3rem); /* Padding laterale fluido */
+}
+
+/* Fix per la galleria su schermi piccoli */
+@media (max-width: 640px) {
+    .griglia-media {
+        grid-template-columns: 1fr; /* Una sola colonna */
+    }
+}
+
+/* ==========================================================================
+   FIX RESPONSIVE: SEMPLIFICAZIONE MILESTONE SU MOBILE (v2)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* 1. Nascondiamo il testo descrittivo */
+    .milestone span small {
+        display: none;
+    }
+
+    /* 2. Regole base per tutte le milestone su mobile */
+    .milestone span {
+        transform: none !important;
+   
+        transform: translateX(-50%) !important;
+        font-size: 0.8rem;
+        text-align: center;
+        width: auto;
+        bottom: 5px; /* Posizione di default (bassa) */
+    }
+
+    /* 3. Regole per le milestone sotto la barra */
+    .milestone.milestone-sotto span {
+        top: 5px;
+        left: 50px;
+        text-align: left;
+        bottom: 20px;
+    }
+    
+
+
+    .milestone:nth-child(3) span {
+        bottom: 40px; /* Posizione alta */
+        left: 50px;
+        text-align: left;
+    }    
+    .milestone:nth-child(5) span {
+        left: 20px;
+        text-align: left;
+    }    
+    .milestone:nth-child(6) span {
+        bottom: 70px; /* Posizione alta */
+    }    
+    .milestone:nth-child(8) span {
+        bottom: 20px; /* Posizione alta */
+        left: -25px;
+    }
+
+    /* Spazio di sicurezza sopra la barra */
+    #supporto .barra-finanziamento-contenitore {
+        margin-top: 2rem;
+    }
+
+    #barra-testo {
+        display: none;
+    }
+
+    #supporto .contatore-soldi {
+        margin-top: 3rem; /* Valore generoso per creare separazione netta */
+    }
+
+}

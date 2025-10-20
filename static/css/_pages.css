@@ -1,0 +1,778 @@
+/* ==========================================================================
+   PAGINA NOTIZIE
+   ========================================================================== */
+.titolo-pagina {
+    padding-top: 120px; /* Ridotto leggermente lo spazio sopra */
+    padding-bottom: 60px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px;
+    background: none; /* Rimuoviamo il gradiente che non serve più */
+}
+
+.titolo-pagina h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Stessa dimensione responsive delle altre sezioni */
+    font-family: 'Cinzel', serif; /* Coerenza con gli altri titoli */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 1.1;
+    /* Rimuoviamo le proprietà per la linea decorativa */
+    position: static;
+    display: block;
+    padding-bottom: 0;
+}
+
+.titolo-pagina h1::after {
+    display: none; /* Disabilitiamo la vecchia linea decorativa */
+}
+
+.contenuto-principale {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+/* ==========================================================================
+   TIPOGRAFIA ARTICOLI (GENERATI DA MARKDOWN) - VERSIONE FINALE
+   ========================================================================== */
+
+.articolo h1, .articolo h2, .articolo h3, .articolo h4, .articolo h5, .articolo h6 {
+    font-family: 'Cinzel', serif;
+}
+.articolo h1 { font-size: 2.5rem; color: #ffffff; margin-bottom: 10px; }
+.articolo h2 {
+    margin-bottom: 10px;
+}
+.articolo h2 a { text-decoration: none; color: #c8a15c; transition: color 0.3s ease; }
+.articolo h2 a:hover { color: #ffffff; }
+.articolo h3 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; color: #ffffff; }
+
+.articolo .meta-info {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.articolo p {
+    font-family: sans-serif;
+    line-height: 1.7;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.articolo strong, .articolo b {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.articolo ul { list-style-type: none; padding-left: 0; margin-bottom: 15px; }
+.articolo li {
+    font-family: sans-serif;
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #cccccc;
+}
+.articolo li::before {
+    content: '•';
+    color: #c8a15c;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+}
+.articolo li strong { font-size: 1em; }
+
+.articolo blockquote {
+    border-left: 3px solid #c8a45c;
+    padding: 20px 25px;
+    margin: 40px 0;
+    background-color: rgba(200, 164, 92, 0.05);
+}
+
+.articolo blockquote p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   STILI SPECIFICI PAGINA NOTIZIE (LISTA)
+   ========================================================================== */
+
+.estratto-articolo {
+    margin-bottom: 20px;
+}
+
+.leggi-tutto-btn {
+    display: inline-flex; /* Usa flexbox per allineare testo e icona */
+    align-items: center;
+    gap: 10px; /* Spazio tra testo e icona */
+    margin-bottom: 24px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    color: #c8a45c; /* Colore dorato per il testo */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 1px solid #c8a45c; /* Bordo dorato */
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.leggi-tutto-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor; /* L'icona eredita il colore del testo */
+    transition: transform 0.3s ease;
+}
+
+.leggi-tutto-btn:hover {
+    background-color: #c8a45c;
+    border-color: #c8a45c;
+    color: #111111;
+}
+
+.leggi-tutto-btn:hover svg {
+    transform: translateX(5px); /* L'icona si sposta a destra al passaggio del mouse */
+}
+
+
+/* ==========================================================================
+   STILI SPECIFICI PAGINA ARTICOLO (DETTAGLIO)
+   ========================================================================== */
+
+.contenitore-link-ritorno {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.link-ritorno {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    color: #c8a45c;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 1px solid #c8a45c;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.link-ritorno:hover {
+    background-color: #c8a45c;
+    color: #111111;
+}
+
+/* ==========================================================================
+   PAGINA MEDIA
+   ========================================================================== */
+.griglia-media-estesa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.articolo {
+    padding-top: 40px;
+}
+
+/* ==========================================================================
+   PAGINA "IL GIOCO" - SEZIONE REQUISITI
+   ========================================================================== */
+.tabella-requisiti {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.colonna-requisiti h3 {
+    font-size: 1.5rem;
+    color: #c8a45c;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.colonna-requisiti ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.colonna-requisiti li {
+    font-family: sans-serif;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.colonna-requisiti li strong {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.articolo p a {
+    color: #c8a45c;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.articolo p a:hover {
+    color: #ffffff;
+}
+
+.articolo em {
+    font-style: italic;
+    color: #c8a45c;
+}
+
+/* ==========================================================================
+   ELEMENTI PAGINA STORIA E NUOVE SEZIONI HOMEPAGE
+   ========================================================================== */
+.titolo-sezione-interna {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 5rem;
+    color: #FFFFFF; 
+    text-transform: uppercase;
+}
+
+#supporto .titolo-sezione-interna {
+    margin-bottom: 8rem; /* Increased space below "FINANZIA LA RESISTENZA" */
+}
+
+/* NUOVO STILE COMPLETO: Stile per la sezione #filosofia (TENTATIVO FINALE) */
+#filosofia .colonna-testo {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+#filosofia .colonna-testo p {
+    color: #a0aec0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#filosofia blockquote {
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    padding: 20px 60px; /* Spazio laterale per le virgolette */
+    margin: 50px auto;
+    max-width: 600px;
+}
+#filosofia blockquote p {
+    font-family: sans-serif;
+    font-style: italic;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #EAEAEA;
+    line-height: 1.5;
+    padding: 0; /* Rimuoviamo il padding dal paragrafo */
+}
+#filosofia blockquote::before,
+#filosofia blockquote::after {
+    font-family: serif; /* Usiamo un font generico per le virgolette */
+    position: absolute;
+    color: rgba(200, 164, 92, 0.6); /* Leggermente più visibili */
+    font-size: 4rem; /* Più piccole */
+    line-height: 1; /* Altezza di linea controllata */
+}
+#filosofia blockquote::before {
+    content: '“';
+    top: 0;
+    left: 10px;
+}
+#filosofia blockquote::after {
+    content: '”';
+    bottom: -10px; /* Spostata leggermente in basso */
+    right: 10px;
+}
+
+/* NUOVO: Stili per la sezione #il-problema */
+#il-problema {
+    background-color: #000;
+}
+
+#il-problema .titolo-sezione-interna .testo-distruttivo {
+    color: var(--rosso-evidenziato);
+}
+
+.contenitore-punti-dolore {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.punto-dolore {
+    position: relative;
+}
+
+.punto-dolore::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--rosso-evidenziato);
+    transition: width 0.3s ease;
+}
+
+.punto-dolore:hover::before {
+    width: 4px;
+}
+
+.contenuto-punto-dolore {
+    padding: 1rem 0 1rem 3rem;
+    transition: padding-left 0.3s ease;
+}
+
+.punto-dolore:hover .contenuto-punto-dolore {
+    padding-left: 3.5rem;
+}
+
+.titolo-punto-dolore {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titolo-punto-dolore svg {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    color: var(--rosso-evidenziato);
+    width: 24px;
+    height: 24px;
+}
+
+.titolo-punto-dolore h3 {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.contenuto-punto-dolore p {
+    font-family: sans-serif;
+    color: rgba(234, 234, 234, 0.7);
+    line-height: 1.7;
+    padding-left: calc(24px + 1rem);
+}
+
+/* Adattamento timeline per schermi grandi */
+@media (min-width: 768px) {
+    .timeline::before {
+        left: 50%;
+        margin-left: -1.5px;
+    }
+    .timeline-item {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 50px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+}
+
+/* ==========================================================================
+   NUOVA SEZIONE: MISSIONE ZERO
+   ========================================================================== */
+.contenitore-split-verticale {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.colonna-testo-missione {
+    flex-basis: 50%; /* Occupa metà dello spazio */
+}
+
+.colonna-immagine-missione {
+    flex-basis: 50%; /* Occupa l'altra metà */
+}
+.colonna-immagine-missione img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333; /* Aggiunge un bordo sottile all'immagine */
+}
+
+.sopratitolo-missione {
+    font-family: sans-serif;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.titolo-missione {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.testo-missione {
+    font-family: sans-serif;
+    color: #a0aec0;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Stile specifico per la citazione di questa sezione */
+#missione-zero blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 10px 20px;
+    margin: 2.5rem 0;
+    background-color: rgba(200, 164, 92, 0.05); /* Sfondo leggermente dorato */
+    font-family: sans-serif;
+    font-style: italic;
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+/* Gestione per schermi piccoli (tablet e cellulari) */
+@media (max-width: 768px) {
+    .contenitore-split-verticale {
+        flex-direction: column; /* Impila le colonne una sopra l'altra */
+    }
+}
+
+/* ==========================================================================
+   SEZIONE SUPPORTO (FINANZIAMENTO)
+   ========================================================================== */
+#supporto {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.barra-finanziamento-contenitore {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+.barra-finanziamento-progresso {
+    width: 0%; /* Inizializzato a 0%, JS lo aggiornerà */
+    height: 100%;
+    background: linear-gradient(90deg, #c8a45c 0%, #a1854a 100%);
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Animazione fluida */
+}
+
+/* ==========================================================================
+   SEZIONE SUPPORTO (FINANZIAMENTO) - STILE MILESTONE FINALE
+   ========================================================================== */
+
+
+.milestone {
+    position: absolute;
+    bottom: 100%; /* Posiziona l'ancoraggio sopra la barra */
+    transform: translateX(-50%);
+    padding-bottom: 15px; /* Aumenta lo spazio per la rotazione */
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.milestone::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 15px; /* Linea verticale più lunga */
+    background-color: #555;
+}
+
+.milestone span {
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 10px; /* Posiziona la base del testo vicino alla linea */
+    left: 50%;
+    transform-origin: 0 100%; /* Punto di rotazione: in basso a sinistra del testo */
+    transform: rotate(-65deg); /* Angolo molto più inclinato */
+    line-height: 1.4;
+}
+
+/* Gestione milestone SOTTO la barra */
+.milestone.milestone-sotto {
+    bottom: auto;
+    top: 100%; /* Ancoraggio sotto la barra */
+    padding-bottom: 0;
+    padding-top: 15px;
+}
+
+.milestone.milestone-sotto::after {
+    bottom: auto;
+    top: 0;
+    height: 15px;
+}
+
+.milestone.milestone-sotto span {
+    bottom: auto;
+    top: 10px;
+    transform-origin: 0 0; /* Punto di rotazione: in alto a sinistra */
+    transform: rotate(65deg);
+}
+
+/* Caso speciale per la milestone quasi verticale */
+.milestone.milestone-verticale span {
+    transform:  translateX(-100%); /* Ruota e sposta a sinistra della sua larghezza */
+    width: 100px; /* Lasciamo che la larghezza sia automatica */
+    text-align: right; /* Allinea il testo a destra per farlo "appoggiare" alla linea */
+    left: -10px; /* Sposta leggermente a destra della linea verticale */
+    white-space: normal; /* Permette al testo di andare a capo */
+    max-width: 250px; /* Larghezza massima prima di andare a capo */
+}
+
+.contatore-soldi {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.testo-supporto {
+    font-family: sans-serif;
+    text-align: center;
+    color: #a0aec0;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.contenitore-pulsante-supporto {
+    text-align: center;
+}
+
+.pulsante-cta-supporto {
+    padding: 15px 35px;
+    background-color: #c8a45c;
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid #c8a45c;
+}
+
+.pulsante-cta-supporto:hover,
+.pulsante-cta-supporto:focus {
+    background-color: transparent;
+    color: #c8a45c;
+    outline: none;
+}
+
+.barra-finanziamento-testo {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #111;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.testo-prezzo-scontato {
+    font-family: sans-serif;
+    text-align: center;
+    color: #a0aec0;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: -1.5rem auto 2rem auto; /* Spaziatura specifica */
+    font-size: 0.9rem;
+}
+
+.testo-prezzo-scontato strong {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.testo-contributi-alternativi {
+    font-family: sans-serif;
+    text-align: center;
+    color: #888;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.testo-contributi-alternativi a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.testo-contributi-alternativi a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   STILI PER IL MINIGIOCO (NUOVO)
+   ========================================================================== */
+.descrizione-minigioco {
+    font-family: sans-serif;
+    text-align: center;
+    color: #a0aec0;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: -3rem auto 2rem auto; /* Spaziatura per avvicinarlo al titolo */
+}
+
+.contenitore-canvas-gioco {
+    width: 100%;
+    max-width: 900px; /* Limita la larghezza massima */
+    margin: 0 auto;
+    aspect-ratio: 16 / 9; /* Mantiene le proporzioni di un monitor widescreen */
+    background-color: #000000;
+    border: 1px solid #333;
+    position: relative; /* NUOVA RIGA: Fondamentale per contenere l'overlay */
+}
+
+#gioco-3d-canvas {
+    width: 100%;
+    height: 100%;
+    display: block; /* Rimuove eventuali spazi bianchi sotto il canvas */
+}
+
+
+.minigioco-overlay {
+    position: absolute;
+    inset: 0; /* Shorthand per top, right, bottom, left = 0 */
+    background-color: rgba(10, 10, 10, 0.9);
+    z-index: 5; /* Assicura che sia sopra il canvas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.minigioco-overlay-contenuto {
+    max-width: 500px;
+}
+
+.minigioco-titolo {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem; /* Aumentato per più impatto */
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; /* Aumentato spazio sotto */
+    letter-spacing: 2px; /* Aggiunto per eleganza */
+}
+
+.minigioco-istruzioni {
+    font-family: sans-serif;
+    font-size: 1.1rem; /* Leggermente più grande */
+    color: #a0aec0;
+    line-height: 1.7;
+    margin-bottom: 3rem; /* Più spazio sopra il pulsante */
+}
+
+.pulsante-minigioco {
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: #111111;
+    border: 2px solid var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pulsante-minigioco:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   STILI DISCLAIMER MINIGIOCO (NUOVO)
+   ========================================================================== */
+.disclaimer-minigioco {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888; /* Un grigio chiaro per non essere troppo invadente */
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto 0 auto; /* Spazio sopra il disclaimer */
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+.milestone.attivo {
+    color: #ffffff; /* Testo più visibile */
+    font-weight: bold;
+}
+
+.milestone.attivo::after {
+    background-color: var(--accent); /* La linea diventa dorata */
+    height: 20px; /* La linea si allunga leggermente */
+}
+
+.milestone.milestone-sotto.attivo::after {
+    height: 20px;
+}
+
+.skeleton-loader {
+    padding: 20px;
+}
+.skeleton-line {
+    height: 20px;
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite linear;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.skeleton-title { height: 40px; width: 70%; margin-bottom: 25px; }
+.skeleton-meta { width: 40%; height: 15px; margin-bottom: 30px; }
+.skeleton-text { width: 100%; }
+.skeleton-text-short { width: 85%; }
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
