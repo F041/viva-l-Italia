@@ -1,9 +1,9 @@
 name: Aggiorna Conteggio Contributori
 
 on:
-  # Esegue l'azione ogni 6 ore
+  # Esegue l'azione ogni giorno a mezzanotte UTC (corrisponde alle 01:00 o 02:00 in Italia)
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0 * * *'
   # Permette di eseguire l'azione manualmente dalla tab "Actions" di GitHub
   workflow_dispatch:
 

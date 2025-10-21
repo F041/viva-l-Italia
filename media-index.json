@@ -2,28 +2,16 @@
     "_comment": "Lista delle immagini per la galleria. L'ordine qui determina l'ordine di visualizzazione.",
     "immagini": [
         {
-            "url": "media/partigiano-montagna.webp",
-            "caption_key": "gallery_img1_caption"
+            "url": "media/first_screenshot.webp",
+            "caption_key": "media_img1_caption"
         },
         {
-            "url": "media/gruppo-radura.webp",
-            "caption_key": "gallery_img2_caption"
+            "url": "media/second_screenshot.webp",
+            "caption_key": "media_img2_caption"
         },
         {
-            "url": "media/partigiano-vedetta.webp",
-            "caption_key": "gallery_img3_caption"
-        },
-        {
-            "url": "media/campo-innevato.webp",
-            "caption_key": "gallery_img4_caption"
-        },
-        {
-            "url": "media/ritratto-partigiano.webp",
-            "caption_key": "gallery_img5_caption"
-        },
-        {
-            "url": "media/riposo-accampamento.webp",
-            "caption_key": "gallery_img6_caption"
+            "url": "media/third_screenshot.webp",
+            "caption_key": "media_img3_caption"
         }
     ]
 }
