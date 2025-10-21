@@ -7,9 +7,10 @@
     "hero_subtitle": "La resistenza ha inizio.",
     "hero_description": "Un gioco stealth tattico che ti porta nel cuore della guerriglia partigiana. Ogni proiettile conta. Ogni decisione ha un peso. Ogni vittoria costruisce la speranza.",
     "hero_cta_primary": "Entra in brigata",
-    "hero_cta_secondary": "Scopri di più",
+    "hero_cta_secondary": "Scopri di più"
+    ,
     "philosophy_title": "LA GUERRIGLIA NON È IMPROVVISAZIONE.<br><span class=\"testo-accento\">È UNA SCIENZA.</span>",
-    "philosophy_text_1": "Non esistono oggi dei veri e propri giochi di guerriglia, ad eccessione dei war-sim, che assomgiliano ad un secondo lavoro. Guerriglia significa studiare topografia, tattica militare, logistica. Non improvvisare.",
+    "philosophy_text_1": "Non esistono oggi dei veri e propri giochi di guerriglia, ad eccezione dei war-sim, che assomgiliano ad un secondo lavoro. Guerriglia significa studiare topografia, tattica militare, logistica. Non improvvisare.",
     "philosophy_quote": "\"La guerra si combatte per la patria; la guerriglia, per un'altra patria\"",
     "philosophy_text_2": "Le brigate garibaldine non erano bande di ribelli fuorilegge. Erano come eserciti organizzati con commissari politici, strutture gerarchiche, scuole di formazione. Questo gioco ti sfida a costruire quella stessa organizzazione. Da quasi zero.",
     "pain1_title": "EROE SOLITARIO ONNIPOTENTE?",
@@ -35,13 +36,16 @@
     "media_img1_caption": "Primo screenshot dal gioco.",
     "media_img2_caption": "Arma iniziale",
     "media_img3_caption": "Arma inglese raccoglibile",
-    "media_img4_caption": "Mitragliatrice Sten",
+    "media_img4_caption": "Mitragliatrice Sten"
+    ,
     "footer_copyright": "© 2025 Viva l'Italia. Tutti i diritti riservati.",
-    "footer_disclaimer": "Questo è un progetto multidisciplinare, con limitazioni storiche e non solo.",
+    "footer_disclaimer": "Questo è un progetto multidisciplinare, con limitazioni storiche e non solo."
+    ,
     "news_back_home": "← Torna alla Homepage",
     "news_read_more": "Leggi tutto",
     "news_back_list": "← Tutte le notizie",
-    "media_page_title": "Media",
+    "media_page_title": "Media"
+    ,
     "game_page_title": "Il Gioco",
     "game_s1_title": "Un Approccio Storico Rispettoso",
     "game_s1_text1": "<em>Viva l'Italia</em> è un'esperienza di guerriglia tattica in prima persona che si prefigge di esplorare il periodo della Resistenza italiana con il massimo rispetto per la sua complessità storica e umana. Il nostro obiettivo è creare un'opera interattiva matura, storicamente informata e lontana da ogni retorica superficiale o controversa.",
@@ -57,14 +61,16 @@
     "game_req_rec": "Consigliati",
     "game_req_os": "Windows 10 64-bit",
     "game_req_disk": "10 GB di spazio disponibile",
-    "game_req_disk_ssd": "10 GB di spazio disponibile (SSD consigliato)",
+    "game_req_disk_ssd": "10 GB di spazio disponibile (SSD consigliato)"
+    ,
     "story_timeline_title": "Contesto Storico: 1943-1945",
     "story_tl1_title": "SETTEMBRE 1943: Nascita della Resistenza",
     "story_tl1_desc": "Dopo l'armistizio dell'8 Settembre, l'esercito italiano si dissolve. Le forze tedesche occupano il paese, dando inizio a due anni di brutale occupazione e guerra civile. I primi gruppi partigiani si formano spontaneamente sulle montagne piemontesi.",
     "story_tl2_title": "SETTEMBRE-OTTOBRE 1944: La Repubblica dell'Ossola",
     "story_tl2_desc": "In un'audace offensiva, le forze partigiane liberano completamente la Val d'Ossola. Per 40 giorni, la zona diventa un territorio libero, un'esperienza democratica e un simbolo di speranza per tutta l'ITALIA occupata.",
     "story_tl3_title": "APRILE 1945: Liberazione",
-    "story_tl3_desc": "Mentre le forze alleate sfondano la Linea Gotica, il Comitato di Liberazione Nazionale ordina l'insurrezione generale. Le brigate partigiane, ormai un vero e proprio esercito, liberano le principali città del Nord ITALIA prima dell'arrivo degli Alleati.",
+    "story_tl3_desc": "Mentre le forze alleate sfondano la Linea Gotica, il Comitato di Liberazione Nazionale ordina l'insurrezione generale. Le brigate partigiane, ormai un vero e proprio esercito, liberano le principali città del Nord ITALIA prima dell'arrivo degli Alleati."
+    ,
     "m0_subtitle": "OPERAZIONE 01 // IVREA",
     "m0_title": "IL COMMISSARIATO",
     "m0_text1": "La Resistenza inizia con un atto di disobbedienza. La tua prima missione ti porta nel cuore notturno di Ivrea. L'obiettivo: il commissariato di polizia. Dopo il rifiuto del maresciallo di consegnare le armi, l'unica via è prendersele con la forza.",
@@ -75,8 +81,7 @@
     "support_cta": "Contribuisci ora",
     "support_price_info": "Fino all'uscita nel 2027, puoi supportare lo sviluppo al prezzo speciale di <strong>19,43€</strong>. Al lancio, il prezzo finale sarà di <strong>25,04€</strong>.",
     "support_alt_contribution": "Vuoi contribuire in altri modi? Siamo sempre alla ricerca di artisti 3D, musicisti, e doppiatori. <a href=\"mailto:info.vivalitalia@gmail.com\">Contattaci</a>!",
-    "shooting_gallery_title": "METTITI ALLA PROVA",
-    "shooting_gallery_desc": "Prendi la mira e colpisci i bersagli. Ricorda: ogni proiettile conta."
+    "shooting_gallery_title": "METTITI ALLA PROVA"
     ,
     "minigame_disclaimer": "La grafica e le meccaniche non rappresentano la qualità finale del gioco.",
     "minigame_hud_title": "INFILTRAZIONE",

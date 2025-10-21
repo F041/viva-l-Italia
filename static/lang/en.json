@@ -75,8 +75,7 @@
     "support_cta": "Contribute Now"   ,
     "support_price_info": "Until the release in 2027, you can support development at the special price of <strong>€19.43</strong>. At launch, the final price will be <strong>€25.04</strong>.",
     "support_alt_contribution": "Want to contribute in other ways? We are always looking for 3D artists, musicians, and voice actors. <a href=\"mailto:info.vivalitalia@gmail.com\">Contact us</a>!",
-    "shooting_gallery_title": "TEST YOUR AIM",
-    "shooting_gallery_desc": "Take aim and hit the targets. Remember: every bullet counts."
+    "shooting_gallery_title": "TEST YOUR AIM"
     ,
     "minigame_disclaimer": "The graphics and mechanics do not represent the final quality of the game.",
     "minigame_hud_title": "INFILTRATION",
@@ -87,7 +86,7 @@
     "minigame_hud_controls_eliminate": "Eliminate",
     "minigame_hud_controls_unlock": "Unlock Mouse"
     ,
-    
+
     "milestone_1": "<span>€100<br>Steam Release</span>",
     "milestone_2": "<span>€50K<br>Soundtrack Release</span>",
     "milestone_3": "<span>€200K<br>3D Models Upgrade</span>",
