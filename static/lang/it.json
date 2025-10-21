@@ -71,11 +71,12 @@
     "story_tl3_title": "APRILE 1945: Liberazione",
     "story_tl3_desc": "Mentre le forze alleate sfondano la Linea Gotica, il Comitato di Liberazione Nazionale ordina l'insurrezione generale. Le brigate partigiane, ormai un vero e proprio esercito, liberano le principali città del Nord ITALIA prima dell'arrivo degli Alleati."
     ,
-    "m0_subtitle": "OPERAZIONE 01 // IVREA",
-    "m0_title": "IL COMMISSARIATO",
-    "m0_text1": "La Resistenza inizia con un atto di disobbedienza. La tua prima missione ti porta nel cuore notturno di Ivrea. L'obiettivo: il commissariato di polizia. Dopo il rifiuto del maresciallo di consegnare le armi, l'unica via è prendersele con la forza.",
-    "m0_quote": "\"Il maresciallo ha direttive dal governo Badoglio. Non ci darà nulla. Se vogliamo i fucili, dobbiamo entrare e prenderli noi.\"",
-    "m0_text2": "Infiltrati, trova l'armeria e recupera le armi per la tua neonata brigata. Ma fa' attenzione: ogni rumore potrebbe allertare le guardie. Non è un assalto, è un'operazione chirurgica.",
+    "m0_subtitle": "OPERAZIONE 01 // BIELLA",
+    "m0_title": "LE ARMI NEGATE",
+    "m0_text1": "La Resistenza non può nascere a mani nude. La tua prima missione è a Biella. L'obiettivo: ottenere i fucili dal deposito militare comandato dal colonnello Maffei. Ma l'incontro non va come sperato.",
+    "m0_quote": "\"Ho già un accordo con i tedeschi. Loro non entrano in città, e io garantisco l'ordine. Non vi darò un solo fucile per scatenare una guerra che non possiamo vincere.\"",
+    "m0_text2": "Di fronte al tradimento, la scelta è obbligata. Se le armi non vengono consegnate, devono essere prese. Infiltrati nel deposito, raggiungi l'armeria e recupera ciò che è necessario per armare la tua neonata brigata."
+    ,
     "support_title": "FINANZIA LA RESISTENZA",
     "support_text": "\"VIVA L'ITALIA\" è un progetto indipendente alimentato dalla passione. Ogni contributo, grande o piccolo, ci aiuta a dedicare più tempo e risorse allo sviluppo, migliorando la qualità del gioco e aggiungendo nuovi contenuti. Il tuo supporto è il nostro carburante.",
     "support_cta": "Contribuisci ora",
