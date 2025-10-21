@@ -79,13 +79,21 @@
     "shooting_gallery_desc": "Prendi la mira e colpisci i bersagli. Ricorda: ogni proiettile conta."
     ,
     "minigame_disclaimer": "La grafica e le meccaniche non rappresentano la qualità finale del gioco.",
-"milestone_1": "<span>100€<br>Pubblicazione su Steam</span>",
-"milestone_2": "<span>50K€<br>Creazione colonna sonora</span>",
-"milestone_3": "<span>200K€<br>Miglioramento modelli 3D</span>",
-"milestone_3b": "<span>500K€<br>Doppiaggio professionale</span>",
-"milestone_4": "<span>1M€<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
-"milestone_5": "<span>2M€<br>Supporto mod</span>",
-"team_title": "SQUADRA DI SVILUPPO",
+    "minigame_hud_title": "INFILTRAZIONE",
+    "minigame_hud_eliminations": "ELIMINAZIONI:",
+    "minigame_hud_controls_move": "Movimento",
+    "minigame_hud_controls_view": "Visuale",
+    "minigame_hud_controls_crouch": "Accovacciati",
+    "minigame_hud_controls_eliminate": "Elimina",
+    "minigame_hud_controls_unlock": "Sblocca Mouse"
+    ,
+    "milestone_1": "<span>100€<br>Pubblicazione su Steam</span>",
+    "milestone_2": "<span>50K€<br>Creazione colonna sonora</span>",
+    "milestone_3": "<span>200K€<br>Miglioramento modelli 3D</span>",
+    "milestone_3b": "<span>500K€<br>Doppiaggio professionale</span>",
+    "milestone_4": "<span>1M€<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
+    "milestone_5": "<span>2M€<br>Supporto mod</span>",
+    "team_title": "SQUADRA DI SVILUPPO",
     "team_member1_caption": "Appassionato di scienza, storia, statistica."
 
 }

@@ -74,6 +74,7 @@ function initMiniGame() {
             <div style="margin: 4px 0;"><kbd style="background: #222; padding: 2px 5px; border-radius: 3px; border: 1px solid #444;">ESC</kbd> Sblocca Mouse</div>
         </div>`;
     canvas.parentElement.appendChild(hudDiv);
+    if (window.translatePage) window.translatePage();
     
     const statusDiv = document.createElement('div');
     statusDiv.style.cssText = `position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 8px 20px; font-family: 'Cinzel', serif; color: white; background: rgba(40, 120, 40, 0.7); border: 1px solid rgba(80, 200, 80, 0.5); font-weight: bold; font-size: 1rem; z-index: 10; transition: all 0.3s ease; text-transform: uppercase; display: none;`;

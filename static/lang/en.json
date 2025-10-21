@@ -76,14 +76,24 @@
     "support_price_info": "Until the release in 2027, you can support development at the special price of <strong>€19.43</strong>. At launch, the final price will be <strong>€25.04</strong>.",
     "support_alt_contribution": "Want to contribute in other ways? We are always looking for 3D artists, musicians, and voice actors. <a href=\"mailto:info.vivalitalia@gmail.com\">Contact us</a>!",
     "shooting_gallery_title": "TEST YOUR AIM",
-    "shooting_gallery_desc": "Take aim and hit the targets. Remember: every bullet counts.",
+    "shooting_gallery_desc": "Take aim and hit the targets. Remember: every bullet counts."
+    ,
     "minigame_disclaimer": "The graphics and mechanics do not represent the final quality of the game.",
-"milestone_1": "<span>€100<br>Steam Release</span>",
-"milestone_2": "<span>€50K<br>Soundtrack Release</span>",
-"milestone_3": "<span>€200K<br>3D Models Upgrade</span>",
-"milestone_3b": "<span>€500K<br>Professional Voice Acting</span>",
-"milestone_4": "<span>€1M<br>Expansion: The 4 Days of Naples with 'femminielli'</span>",
-"milestone_5": "<span>€2M<br>Modding Support</span>",
-"team_title": "DEVELOPMENT TEAM",
+    "minigame_hud_title": "INFILTRATION",
+    "minigame_hud_eliminations": "ELIMINATIONS:",
+    "minigame_hud_controls_move": "Movement",
+    "minigame_hud_controls_view": "Look",
+    "minigame_hud_controls_crouch": "Crouch",
+    "minigame_hud_controls_eliminate": "Eliminate",
+    "minigame_hud_controls_unlock": "Unlock Mouse"
+    ,
+    
+    "milestone_1": "<span>€100<br>Steam Release</span>",
+    "milestone_2": "<span>€50K<br>Soundtrack Release</span>",
+    "milestone_3": "<span>€200K<br>3D Models Upgrade</span>",
+    "milestone_3b": "<span>€500K<br>Professional Voice Acting</span>",
+    "milestone_4": "<span>€1M<br>Expansion: The 4 Days of Naples with 'femminielli'</span>",
+    "milestone_5": "<span>€2M<br>Modding Support</span>",
+    "team_title": "DEVELOPMENT TEAM",
     "team_member1_caption": "Passionate about science, history, and statistics."
 }
