@@ -570,3 +570,13 @@
     border-width: 0 var(--frame-thickness, 3px) var(--frame-thickness, 3px) 0;
 }
 
+/* Stile per i link nel footer */
+.info-legali a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.info-legali a:hover {
+    text-decoration: underline;
+}

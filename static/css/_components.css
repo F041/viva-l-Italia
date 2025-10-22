@@ -403,3 +403,37 @@
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+.link-social-membro {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center; 
+}
+
+.link-social-membro a {
+    color: #888;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link-social-membro a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.link-social-membro svg,
+.link-social-membro img {
+    width: 24px;
+    height: 24px;
+    display: block; /* Aggiunto per un controllo migliore */
+}
+
+.link-social-membro img {
+    filter: grayscale(100%) opacity(60%); /* Monocromatico e leggermente sbiadito */
+    transition: filter 0.3s ease;
+}
+
+.link-social-membro a:hover img {
+    filter: grayscale(0%) opacity(100%); /* A colori e piena opacità al passaggio del mouse */
+}

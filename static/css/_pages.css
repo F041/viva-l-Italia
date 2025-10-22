@@ -63,6 +63,16 @@
     margin-bottom: 15px;
 }
 
+.articolo a {
+    color: var(--accent); /* Usa il nostro colore dorato */
+    text-decoration: underline; /* Sottolinea per chiarezza */
+    transition: color 0.3s ease;
+}
+
+.articolo a:hover {
+    color: #ffffff; /* Bianco al passaggio del mouse */
+}
+
 .articolo strong, .articolo b {
     font-family: sans-serif;
     font-size: 1em;
@@ -776,3 +786,4 @@
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
