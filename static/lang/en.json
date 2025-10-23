@@ -55,9 +55,12 @@
     "game_s2_title": "System Requirements (PC)",
     "game_req_min": "Minimum",
     "game_req_rec": "Recommended",
-    "game_req_os": "Windows 10 64-bit",
-    "game_req_disk": "10 GB available space",
-    "game_req_disk_ssd": "10 GB available space (SSD recommended)",
+    "game_req_os": "Windows 10 64-bit"
+    ,
+"game_req_disk": "GB available space (current)",
+    "game_req_disk_ssd": "GB available space (SSD recommended)"
+    ,
+
     "story_timeline_title": "Historical Context: 1943-1945",
     "story_tl1_title": "SEPTEMBER 1943: The Birth of Resistance",
     "story_tl1_desc": "After the Armistice of September 8, the Italian army dissolves. German forces occupy the country, beginning two years of brutal occupation and civil war. The first partisan groups spontaneously form in the Piedmont mountains.",
@@ -76,7 +79,7 @@
     "support_cta": "Contribute Now"   ,
     "support_price_info": "Until the release in 2027, you can support development at the special price of <strong>€19.43</strong>. At launch, the final price will be <strong>€25.04</strong>.",
     "support_alt_contribution": "Want to contribute in other ways? We are always looking for 3D artists, musicians, and voice actors. <a href=\"mailto:info.vivalitalia@gmail.com\">Contact us</a>!",
-    "shooting_gallery_title": "TEST YOUR AIM"
+    "shooting_gallery_title": "TEST YOURSELF"
     ,
     "minigame_disclaimer": "The graphics and mechanics do not represent the final quality of the game.",
     "minigame_hud_title": "INFILTRATION",

@@ -60,8 +60,8 @@
     "game_req_min": "Minimi",
     "game_req_rec": "Consigliati",
     "game_req_os": "Windows 10 64-bit",
-    "game_req_disk": "10 GB di spazio disponibile",
-    "game_req_disk_ssd": "10 GB di spazio disponibile (SSD consigliato)"
+"game_req_disk": "GB di spazio disponibile (attuali)",
+    "game_req_disk_ssd": "GB di spazio disponibile (SSD consigliato)"
     ,
     "story_timeline_title": "Contesto Storico: 1943-1945",
     "story_tl1_title": "SETTEMBRE 1943: Nascita della Resistenza",

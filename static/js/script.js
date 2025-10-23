@@ -141,6 +141,8 @@
 
             localStorage.setItem('userLanguage', lang);
             console.log(`Lingua impostata a: ${lang}`);
+
+            document.dispatchEvent(new Event('languageChanged'));
         } catch (error) {
             console.error(`Errore nell'impostare la lingua ${lang}:`, error);
         }
