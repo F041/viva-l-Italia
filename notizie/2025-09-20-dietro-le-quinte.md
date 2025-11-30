@@ -19,7 +19,7 @@ La fase di ricerca ha coinvolto varie fonti: il già citato *Il monte Rosa è sc
 Per le fonti usate e una questione aritmetica, il gioco si concentra sulla brigata Garibaldi, i partigiani comunisti. Si troveranno anche riferiemnti di altri gruppi partigiani, come ad esempio quelli riconosciuti e supportati dagli Alleati: la divisione Valtoce dei fratelli Di Dio. 
 
 Trasformare la storia in meccaniche giocabili è stata la sfida tecnica ed etica principale. 
-Il gioco ha un sistema stealth che valorizza postura, distanza e rumore: il giocatore deve pianificare e osservare, proprio come avrebbe fatto un partigiano che poteva perdere la vita da un momento all'altro. Anche la scarsità di munizioni e la gestione del cibo sono parte integrante del design, perché i due principali nemici dei partigiani come arma non usavano solo le pistole più o meno automatiche, ma la fame.
+Il gioco ha un sistema *stealth* che valorizza postura, distanza e rumore: il giocatore deve pianificare e osservare, proprio come avrebbe fatto un partigiano che poteva perdere la vita da un momento all'altro. Anche la scarsità di munizioni e la gestione del cibo sono parte integrante del design, perché i due principali nemici dei partigiani come arma non usavano solo le pistole più o meno automatiche, ma la fame.
 
 Oltre le sfide tecniche si sono presentate anche quelle narrative.
 Come tradurre il dubbio di prendere le armi quando gli Alleati avrebbero comunque risalito l'Italia?
