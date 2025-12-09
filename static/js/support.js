@@ -16,43 +16,57 @@
     // Funzione asincrona per caricare i dati e aggiornare la UI
     async function aggiornaBarraFinanziamento() {
         try {
-            // 1. Carica il file di testo
-            const response = await fetch('contributors.txt');
-            if (!response.ok) {
-                throw new Error('File contributors.txt non trovato.');
+            // 1. Eseguiamo entrambe le richieste di rete in parallelo
+            const [contributorsResponse, donationsResponse] = await Promise.all([
+                fetch('contributors.txt').catch(e => e), // Continua anche se fallisce
+                fetch('donations-log.txt').catch(e => e) // Continua anche se fallisce
+            ]);
+
+            // 2. Calcoliamo il totale dalle vendite standard
+            let totaleDaVendite = 0;
+            if (contributorsResponse.ok) {
+                const testoContributori = await contributorsResponse.text();
+                const numeroContributori = parseInt(testoContributori.trim(), 10);
+                if (!isNaN(numeroContributori)) {
+                    totaleDaVendite = numeroContributori * PREZZO_CONTRIBUTO;
+                }
+            } else {
+                console.warn('File contributors.txt non trovato o illeggibile. Ignorato.');
             }
-            const testo = await response.text();
-            
-            // 2. Calcola i valori
-            const numeroContributori = parseInt(testo.trim(), 10);
-            if (isNaN(numeroContributori)) {
-                throw new Error('Il contenuto del file non è un numero valido.');
+
+            // 3. Calcoliamo il totale dalle donazioni manuali
+            let totaleDaDonazioni = 0;
+            if (donationsResponse.ok) {
+                const testoDonazioni = await donationsResponse.text();
+                const importi = testoDonazioni.trim().split('\n');
+                totaleDaDonazioni = importi.reduce((somma, importo) => {
+                    const valore = parseFloat(importo.trim());
+                    return somma + (isNaN(valore) ? 0 : valore);
+                }, 0);
+            } else {
+                console.warn('File donations-log.txt non trovato o illeggibile. Ignorato.');
             }
             
-            const soldiRaccolti = numeroContributori * PREZZO_CONTRIBUTO;
+            // 4. Calcoliamo il totale finale
+            const soldiRaccolti = totaleDaVendite + totaleDaDonazioni;
             const percentualeRaccolta = (soldiRaccolti / OBIETTIVO_FINALE) * 100;
 
             // Formattatori per una visualizzazione pulita
             const formatSoldi = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 });
             
-            // 3. Aggiorna l'interfaccia dopo un breve ritardo per l'animazione
+            // 5. Aggiorna l'interfaccia dopo un breve ritardo per l'animazione
             setTimeout(() => {
                 barraProgresso.style.width = `${Math.min(percentualeRaccolta, 100)}%`;
                 contatoreSoldi.textContent = `${formatSoldi.format(soldiRaccolti)} / ${formatSoldi.format(OBIETTIVO_FINALE)}`;
                 barraTesto.textContent = formatSoldi.format(soldiRaccolti);
 
-                // ---  LOGICA PER ATTIVARE LE MILESTONE ---
+                // --- LOGICA PER ATTIVARE LE MILESTONE (invariata) ---
                 const milestones = document.querySelectorAll('.milestone');
                 milestones.forEach(milestone => {
-                    // Estraiamo il valore numerico dalla posizione 'left' in percentuale
                     const milestonePercent = parseFloat(milestone.style.left);
-                    
-                    // Se la percentuale raccolta è maggiore o uguale a quella della milestone...
                     if (percentualeRaccolta >= milestonePercent) {
-                        // ...la attiviamo.
                         milestone.classList.add('attivo');
                     } else {
-                        // Altrimenti, ci assicuriamo che non sia attiva.
                         milestone.classList.remove('attivo');
                     }
                 });

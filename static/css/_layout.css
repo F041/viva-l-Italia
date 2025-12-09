@@ -303,6 +303,17 @@
     border-color: var(--accent);
 }
 
+.pulsante-eroe.terziario {
+    background-color: transparent;
+    border-color: rgba(200, 164, 92, 0.5); /* Bordo dorato ma più scuro/trasparente */
+    color: var(--accent);
+}
+.pulsante-eroe.terziario:hover {
+    background-color: var(--accent-soft); /* Sfondo leggermente dorato al passaggio del mouse */
+    border-color: var(--accent);
+    color: #ffffff; /* Testo bianco per contrasto */
+}
+
 .icona-scroll-giu {
     position: absolute;
     bottom: 3rem;
