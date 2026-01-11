@@ -265,6 +265,25 @@
     margin-bottom: 9rem; /* Increased space below "FINANZIA LA RESISTENZA" */
 }
 
+/* Stile per il link nella sezione Supporto */
+.testo-ringraziamento-donatori {
+    font-family: sans-serif;
+    text-align: center;
+    color: #a0aec0; /* Stesso colore del testo di supporto principale */
+    margin-top: 2rem; /* Spazio per separarlo dal pulsante CTA */
+    font-size: 0.9rem; /* Leggermente più piccolo per dargli un'importanza secondaria */
+}
+
+.testo-ringraziamento-donatori a {
+    color: var(--accent); /* Usa il nostro colore dorato per il link */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.testo-ringraziamento-donatori a:hover {
+    color: #ffffff; /* Il link diventa bianco al passaggio del mouse */
+}
+
 /* NUOVO STILE COMPLETO: Stile per la sezione #filosofia (TENTATIVO FINALE) */
 #filosofia .colonna-testo {
     max-width: 800px;

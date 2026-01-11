@@ -3,6 +3,7 @@
     "nav_il_gioco": "Il gioco",
     "nav_storia": "Storia",
     "nav_media": "Media",
+    "nav_svizzeri": "Gli svizzeri",
     "nav_acquista": "Supporta ora",
     "hero_subtitle": "La resistenza ha inizio.",
     "hero_description": "Un gioco tattico che ti porta nel cuore della guerriglia partigiana. Ogni proiettile conta. Ogni decisione ha un peso. Ogni vittoria costruisce la speranza.",
@@ -94,7 +95,7 @@
     "minigame_hud_controls_eliminate": "Elimina",
     "minigame_hud_controls_unlock": "Sblocca Mouse"
     ,
-    "milestone_1": "<span>100€<br>Pubblicazione su Steam</span>",
+    "milestone_1": "<span>1000€<br>Pubblicazione su Steam</span>",
     "milestone_2": "<span>50K€<br>Creazione colonna sonora</span>",
     "milestone_3": "<span>200K€<br>Miglioramento modelli 3D</span>",
     "milestone_3b": "<span>500K€<br>Doppiaggio professionale</span>",
@@ -103,6 +104,11 @@
     "team_title": "SQUADRA DI SVILUPPO",
     "team_member1_caption": "Appassionato di scienza, storia, statistica."
     ,    
+
+    "svizzeri_page_title":"Gli “Svizzeri”",
+    "svizzeri_intro_1": "Nella storia della Resistenza italiana, figure come Alfredo Pizzoni e il CLNAI furono fondamentali. Operando spesso dalla Svizzera, permisero ai partigiani di armarsi, nutrirsi e combattere, raccogliendo e gestendo fondi.",
+    "svizzeri_intro_2": "Allo stesso modo, questo progetto non sarebbe possibile senza il supporto diretto dei suoi finanziatori. Ogni contributo, grande o piccolo, è la nafta che alimenta la motivazione e lo sviluppo. Questa pagina è dedicata a voi, i nostri \"Svizzeri\", che credete in questo progetto e ne garantite la sopravvivenza e la crescita.",
+    "svizzeri_list_title": "Ecco i nostri svizzeri",
     "footer_privacy_policy": "INFORMATIVA SULLA PRIVACY"
 
 }

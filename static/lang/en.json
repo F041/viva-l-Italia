@@ -3,6 +3,7 @@
     "nav_il_gioco": "The Game",
     "nav_storia": "Story",
     "nav_media": "Media",
+    "nav_svizzeri": "The \"Swiss\"",
     "nav_acquista": "Support Now",
     "hero_subtitle": "The resistance begins.",
     "hero_description": "A tactical game that takes you into the heart of partisan warfare. Every bullet counts. Every decision matters. Every victory builds hope.",
@@ -39,7 +40,7 @@
     "media_img3_caption": "Lootable British weapon",
     "media_img4_caption": "Sten submachine gun",
     "footer_copyright": "© 2025 Viva l'Italia. All rights reserved.",
-    "footer_disclaimer": "This is a non-profit project created for educational purposes.",
+    "footer_disclaimer": "This is a multidisciplinary project, with historical limitations and more.",
     "news_back_home": "← Back to Homepage",
     "news_read_more": "Read More",
     "news_back_list": "← All News",
@@ -93,7 +94,7 @@
     "minigame_hud_controls_unlock": "Unlock Mouse"
     ,
 
-    "milestone_1": "<span>€100<br>Steam Release</span>",
+    "milestone_1": "<span>€1000<br>Steam Release</span>",
     "milestone_2": "<span>€50K<br>Soundtrack Release</span>",
     "milestone_3": "<span>€200K<br>3D Models Upgrade</span>",
     "milestone_3b": "<span>€500K<br>Professional Voice Acting</span>",
@@ -102,5 +103,9 @@
     "team_title": "DEVELOPMENT TEAM",
     "team_member1_caption": "Passionate about science, history, and statistics."
     ,
+    "svizzeri_page_title":"The “Swiss”",
+    "svizzeri_intro_1": "In the history of the Italian Resistance, figures such as Alfredo Pizzoni and the CLNAI played a fundamental role. Often operating from Switzerland, they enabled the partisans to arm themselves, feed themselves and fight, by collecting and managing funds.",
+    "svizzeri_intro_2": "Likewise, this project would not be possible without the direct support of its backers. Every contribution, large or small, is the fuel that powers the motivation and development. This page is dedicated to you, our \"Swiss\", who believe in this project and guarantee its survival and growth.",
+    "svizzeri_list_title": "Here are our \"Swiss\"",
     "footer_privacy_policy": "PRIVACY POLICY"
 }
