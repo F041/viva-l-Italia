@@ -17,6 +17,7 @@
     "philosophy_text_2": "Le brigate garibaldine non erano bande di ribelli fuorilegge. Erano come eserciti organizzati con commissari politici, strutture gerarchiche, scuole di formazione. Questo gioco ti sfida a costruire quella stessa organizzazione. Da quasi zero.",
     "pain1_title": "EROE SOLITARIO ONNIPOTENTE?",
     "pain1_text": "Che tu sia un Assassino inarrestabile o un supersoldato contro un esercito come in <em>Metal Gear Solid</em>, le tue azioni spesso non hanno un peso reale sul mondo. In <em>Viva l'Italia</em>, non sei un fantasma. Ogni vittoria o sconfitta influenza il prestigio della tua brigata, attira nuove reclute o le fa allontanare. Sei un leader, non un esercito di un solo uomo.",
+    "pain_section_title": "SEI STANCO DEL<br><span class=\"testo-distruttivo\">SOLITO STEALTH?</span>",
     "pain2_title": "STEALTH OPZIONALE?",
     "pain2_text": "In molti giochi, se vieni scoperto, la missione si trasforma semplicemente in uno sparatutto. In <em>Viva l'Italia</em>, far scattare un allarme non è una scelta di stile: significa l'arrivo di rinforzi schiaccianti che ti costringeranno alla ritirata o ti condanneranno alla morte.",
     "pain3_title": "UN PUZZLE CON UNA SOLA SOLUZIONE?",
@@ -87,6 +88,7 @@
     "support_title": "FINANZIA LA RESISTENZA",
     "support_text": "\"VIVA L'ITALIA\" è un progetto indipendente alimentato dalla passione. Ogni contributo, grande o piccolo, ci aiuta a dedicare più tempo e risorse allo sviluppo, migliorando la qualità del gioco e aggiungendo nuovi contenuti. Il tuo supporto è il nostro carburante.",
     "support_cta": "Contribuisci ora",
+    "support_thanks_donors": "Un ringraziamento speciale a tutti i nostri donatori. <a href=\"svizzeri.html\">Scoprili</a>.",
     "support_price_info": "Fino all'uscita nel 2027, puoi supportare lo sviluppo al prezzo speciale di <strong>19,43€</strong>. Al lancio, il prezzo finale sarà di <strong>25,04€</strong>.",
     "support_alt_contribution": "Vuoi contribuire in altri modi? Siamo sempre alla ricerca di artisti 3D, musicisti, e doppiatori. <a href=\"mailto:info.vivalitalia@gmail.com\">Contattaci</a>!",
     "shooting_gallery_title": "METTITI ALLA PROVA"

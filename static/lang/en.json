@@ -17,6 +17,7 @@
     "philosophy_text_2": "The Garibaldi brigades were not bands of outlaw rebels. They were like organized armies with political commissars, hierarchical structures, training schools. This game challenges you to build that same organization. From almost nothing.",
     "pain1_title": "OMNIPOTENT LONE WOLF?",
     "pain1_text": "Whether you're an unstoppable Assassin or a supersoldier against an entire army like in <em>Metal Gear Solid</em>, your actions often lack real weight in the world. In <em>Viva l'Italia</em>, you are not a ghost. Every victory or defeat impacts your brigade's prestige, attracting or deterring new recruits. You are a leader, not a one-man army.",
+    "pain_section_title": "TIRED OF THE<br><span class=\"testo-distruttivo\">USUAL STEALTH?</span>",
     "pain2_title": "STEALTH OPTIONAL?",
     "pain2_text": "In many games, getting caught just turns the mission into a shooter. In <em>Viva l'Italia</em>, triggering an alarm is not a style choice: it means overwhelming reinforcements will arrive, forcing a retreat or sealing your death. The question isn't 'how do you want to play?' but 'how will you survive?'",
     "pain3_title": "A PUZZLE WITH ONE SOLUTION?",
@@ -86,6 +87,7 @@
     "support_title": "FUND THE RESISTANCE",
     "support_text": "\"VIVA L'ITALIA\" is an independent project fueled by passion. Every contribution, big or small, helps us dedicate more time and resources to development, improving the game's quality and adding new content. Your support is our fuel.",
     "support_cta": "Contribute Now"   ,
+    "support_thanks_donors": "A special thanks to all our donors. <a href=\"svizzeri.html\">Meet them</a>.",
     "support_price_info": "Until the release in 2027, you can support development at the special price of <strong>€19.43</strong>. At launch, the final price will be <strong>€25.04</strong>.",
     "support_alt_contribution": "Want to contribute in other ways? We are always looking for 3D artists, musicians, and voice actors. <a href=\"mailto:info.vivalitalia@gmail.com\">Contact us</a>!",
     "shooting_gallery_title": "TEST YOURSELF"
