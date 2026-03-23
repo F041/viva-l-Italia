@@ -2,16 +2,44 @@
     "_comment": "Lista delle immagini per la galleria. L'ordine qui determina l'ordine di visualizzazione.",
     "immagini": [
         {
-            "url": "media/first_screenshot.webp",
-            "caption_key": "media_img1_caption"
+            "url": "media/ssmainmenu.webp",
+            "caption_key": "media_img_mainmenu_caption"
         },
         {
-            "url": "media/second_screenshot.webp",
-            "caption_key": "media_img2_caption"
+            "url": "media/rifugio.webp",
+            "caption_key": "media_img_rifugio1_caption"
         },
         {
-            "url": "media/third_screenshot.webp",
-            "caption_key": "media_img3_caption"
+            "url": "media/rifugio2.webp",
+            "caption_key": "media_img_rifugio2_caption"
+        },
+        {
+            "url": "media/ss1.webp",
+            "caption_key": "media_img_ss1_caption"
+        },
+        {
+            "url": "media/ssgerman.webp",
+            "caption_key": "media_img_german_caption"
+        },
+        {
+            "url": "media/ssimboscata1.webp",
+            "caption_key": "media_img_ambush1_caption"
+        },
+        {
+            "url": "media/ssimboscata2.webp",
+            "caption_key": "media_img_ambush2_caption"
+        },
+        {
+            "url": "media/ssponte.webp",
+            "caption_key": "media_img_bridge1_caption"
+        },
+        {
+            "url": "media/ssponte2.webp",
+            "caption_key": "media_img_bridge2_caption"
+        },
+        {
+            "url": "media/ssponte3.webp",
+            "caption_key": "media_img_bridge3_caption"
         }
     ]
 }
