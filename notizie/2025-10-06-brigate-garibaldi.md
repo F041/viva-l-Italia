@@ -23,13 +23,13 @@ Le **Brigate Garibaldi** sono state **la** formazione partigiana più numerosa e
 
 Contariamente all'idea che ci si può fare fino ad ora, le reclute non venivano discriminate in base alla loro posizione politica. Questa caratteristica in casi rarissimi ha portato ad infiltrazioni da parte del nemico.
 
-## Come il gioca *Viva l’Italia* usa queste informazioni
+## Come il gioco *Viva l’Italia* usa queste informazioni
 
 Per garantire un’ambientazione credibile il gioco fa tesoro di questi elementi storici: la rappresentazione delle Brigate Garibaldi diventano la rete organizzativa a cui il giocatore appartiene. Tuttavia, per rendere il gameplay chiaro e fruibile il gioco adatta alcune componenti:
 
 - il **Rifugio** del gioco sintetizza in un hub operativo la realtà di basi mobili e punti di appoggio multipli usati dai partigiani. Ad esempio, un rifugio della 6ª Brigata garibaldina, di Moscatelli, prima si trovava a Cellio, poi a Rimella, poi altrove.  
 - il protagonista nel gioco aggrega caratteristiche di vari ruoli storici (comandanti, commissari) per dare al giocatore riferimenti narrativi e meccaniche di gestione più immediate  
-- il sistema di **Prestigio** prende spunto dalla fiducia conquistata tra la popolazione locale, che porta nuove reclute e non solo, ma è semplificato in meccaniche di gioco per favorire chiarezza e progressione
+- il sistema di **Supporto civile** prende spunto dalla fiducia conquistata tra la popolazione locale, che porta nuove reclute e non solo, ma è semplificato in meccaniche di gioco per favorire chiarezza e progressione
 - missioni e singoli eventi sono spesso il risultato di condensazioni narrative: prendono spunto da azioni storiche ma vengono riordinati e raccordati per creare un’esperienza coesa e in ritmo con il genere stealth/sparatutto/gestionale.
 
 ## Cosa è autentico e cosa è stato adattato
