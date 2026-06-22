@@ -11,7 +11,7 @@
 
     // Costanti del crowdfunding
     const PREZZO_CONTRIBUTO = 19.43;
-    const OBIETTIVO_FINALE = 2000000;
+    const OBIETTIVO_FINALE = 50000;
 
     // Funzione asincrona per caricare i dati e aggiornare la UI
     async function aggiornaBarraFinanziamento() {
