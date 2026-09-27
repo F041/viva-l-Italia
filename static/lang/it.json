@@ -106,11 +106,12 @@
     "minigame_hud_controls_unlock": "Sblocca Mouse"
     ,
     "milestone_1": "<span>{milestone_1_importo}<br>Pubblicazione su Steam</span>",
-    "milestone_2": "<span>{milestone_2_importo}<br>Creazione colonna sonora</span>",
+    "milestone_2": "<span>{milestone_2_importo}<br>Obiettivo minimo di sopravvivenza</span>",
     "milestone_3": "<span>{milestone_3_importo}<br>Miglioramento modelli 3D</span>",
-    "milestone_3b": "<span>{milestone_3b_importo}<br>Doppiaggio professionale</span>",
-    "milestone_4": "<span>{milestone_4_importo}<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
-    "milestone_5": "<span>{milestone_5_importo}<br>Supporto mod</span>",
+    "milestone_4": "<span>{milestone_4_importo}<br>Doppiaggio professionale</span>",
+    "milestone_5": "<span>{milestone_5_importo}<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
+    "milestone_6": "<span>{milestone_6_importo}<br>Creazione colonna sonora</span>",
+    "milestone_7": "<span>{milestone_7_importo}<br>Supporto mod</span>",
     "team_title": "SQUADRA DI SVILUPPO",
     "team_member1_caption": "Appassionato di scienza, storia, statistica.",
     "team_dev_history": "Sviluppo iniziato nel {data_inizio_sviluppo}: {durata_sviluppo} di lavoro indipendente, budget zero e nessun publisher."
