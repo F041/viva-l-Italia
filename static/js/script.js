@@ -300,6 +300,36 @@ document.addEventListener('keydown', (e) => {
         return lang === 'en' ? `€${numero}` : `${numero}€`;
     };
 
+    // Durata dello sviluppo (anni e mesi trascorsi dalla data di inizio progetto)
+    const formattaDurataSviluppo = (dataInizio, lang) => {
+        const inizio = new Date(dataInizio);
+        if (isNaN(inizio.getTime())) return null;
+
+        const oggi = new Date();
+        let mesiTotali = (oggi.getFullYear() - inizio.getFullYear()) * 12 + (oggi.getMonth() - inizio.getMonth());
+        if (oggi.getDate() < inizio.getDate()) mesiTotali -= 1;
+        if (mesiTotali < 0) mesiTotali = 0;
+
+        const anni = Math.floor(mesiTotali / 12);
+        const mesi = mesiTotali % 12;
+        const singolare = (valore, uno, molti) => `${valore} ${valore === 1 ? uno : molti}`;
+        const testoAnni = singolare(anni, lang === 'en' ? 'year' : 'anno', lang === 'en' ? 'years' : 'anni');
+        const testoMesi = singolare(mesi, lang === 'en' ? 'month' : 'mese', lang === 'en' ? 'months' : 'mesi');
+
+        if (anni === 0 && mesi === 0) return lang === 'en' ? 'less than a month' : 'meno di un mese';
+        if (anni === 0) return testoMesi;
+        if (mesi === 0) return testoAnni;
+        return `${testoAnni} ${lang === 'en' ? 'and' : 'e'} ${testoMesi}`;
+    };
+
+    // Nome del mese e anno di una data ISO, es. "giugno 2025" / "June 2025"
+    const formattaMeseAnno = (dataISO, lang) => {
+        const data = new Date(dataISO);
+        if (isNaN(data.getTime())) return null;
+
+        return new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'it-IT', { month: 'long', year: 'numeric' }).format(data);
+    };
+
     // Valori con cui sostituire i segnaposto {nome} presenti nelle traduzioni
     const costruisciSegnaposto = () => {
         const segnaposto = { year: new Date().getFullYear() };
@@ -320,6 +350,13 @@ document.addEventListener('keydown', (e) => {
                     segnaposto[`${milestone.key}_importo`] = formattaImportoLivello(milestone.target, linguaCorrente);
                 }
             });
+
+            if (configCrowdfunding.dataInizioSviluppo) {
+                const dataInizio = formattaMeseAnno(configCrowdfunding.dataInizioSviluppo, linguaCorrente);
+                const durata = formattaDurataSviluppo(configCrowdfunding.dataInizioSviluppo, linguaCorrente);
+                if (dataInizio) segnaposto.data_inizio_sviluppo = dataInizio;
+                if (durata) segnaposto.durata_sviluppo = durata;
+            }
         }
 
         return segnaposto;
@@ -328,7 +365,8 @@ document.addEventListener('keydown', (e) => {
     const SEGNAPOSTO_REGEX = /\{(\w+)\}/g;
 
     // Un segnaposto è "dinamico" se dipende dalle costanti del crowdfunding
-    const dipendeDaConfig = (nome) => nome.startsWith('prezzo_') || nome === 'obiettivo' || nome.endsWith('_importo');
+    const SEGNAPOSTO_DA_CONFIG = ['prezzo_contributo', 'prezzo_finale', 'obiettivo', 'data_inizio_sviluppo', 'durata_sviluppo'];
+    const dipendeDaConfig = (nome) => SEGNAPOSTO_DA_CONFIG.includes(nome) || nome.endsWith('_importo');
 
     const translatePage = () => {
         const segnaposto = costruisciSegnaposto();

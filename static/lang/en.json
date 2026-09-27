@@ -51,6 +51,7 @@
     "news_back_home": "← Back to Homepage",
     "news_read_more": "Read More",
     "news_back_list": "← All News",
+    "news_page_title": "News and Updates",
     "media_page_title": "Media",
     "game_page_title": "The Game",
     "game_s1_title": "A Respectful Historical Approach",
@@ -71,6 +72,7 @@
     "game_req_disk_ssd": "GB available space (SSD recommended)"
     ,
 
+    "story_page_title": "The Story",
     "story_timeline_title": "Historical Context: 1943-1945",
     "story_tl1_title": "SEPTEMBER 1943: The Birth of Resistance",
     "story_tl1_desc": "After the Armistice of September 8, the Italian army dissolves. German forces occupy the country, beginning two years of brutal occupation and civil war. The first partisan groups spontaneously form in the Piedmont mountains.",
@@ -86,6 +88,7 @@
     ,
     "support_title": "FUND THE RESISTANCE",
     "support_text": "\"VIVA L'ITALIA\" is an independent project fueled by passion. Every contribution, big or small, helps us dedicate more time and resources to development, improving the game's quality and adding new content. Your support is our fuel.",
+    "support_dev_history": "The project started in {data_inizio_sviluppo} with zero budget: free assets only, historical research, and personal time. After {durata_sviluppo} of work, every contribution pays for the next concrete step of development.",
     "support_cta": "Contribute Now"   ,
     "support_thanks_donors": "A special thanks to all our donors. <a href=\"svizzeri.html\">Meet them</a>.",
     "support_price_info": "Until the release in 2030 (with Early Access in Q4 2027), you can support development at the special price of <strong>{prezzo_contributo}</strong>. At launch, the final price will be <strong>{prezzo_finale}</strong>.",
@@ -109,7 +112,8 @@
     "milestone_4": "<span>{milestone_4_importo}<br>Expansion: The 4 Days of Naples with 'femminielli'</span>",
     "milestone_5": "<span>{milestone_5_importo}<br>Modding Support</span>",
     "team_title": "DEVELOPMENT TEAM",
-    "team_member1_caption": "Passionate about science, history, and statistics."
+    "team_member1_caption": "Passionate about science, history, and statistics.",
+    "team_dev_history": "Development started in {data_inizio_sviluppo}: {durata_sviluppo} of independent work, zero budget, no publisher."
     ,
     "svizzeri_page_title":"The “Swiss”",
     "svizzeri_intro_1": "In the history of the Italian Resistance, figures such as Alfredo Pizzoni and the CLNAI played a fundamental role. Often operating from Switzerland, they enabled the partisans to arm themselves, feed themselves and fight, by collecting and managing funds.",

@@ -52,6 +52,7 @@
     "news_back_home": "← Torna alla Homepage",
     "news_read_more": "Leggi tutto",
     "news_back_list": "← Tutte le notizie",
+    "news_page_title": "Notizie e aggiornamenti",
     "media_page_title": "Media"
     ,
     "game_page_title": "Il Gioco",
@@ -64,13 +65,14 @@
     "game_s3_title": "Però VIVA L'ITALIA avrà dei brutti punti in comune con <em>\"Gioventù Ribelle\"</em>",
     "game_s3_text1": "Saremo diretti: non aspettatevi la grafica di un doppio A. Le nostre risorse sono limitate. Aspettati una grafica vecchia di almeno 10 anni. L'energia è stata investita in caratteristiche del gioco 'meno aggiornabili' dei poligoni.",
     "game_s3_text2": "Avrà delle storpiature storiche per adattare la giocabilità ed evitare di renderlo un <em>walking simulator</em>",
-    "game_s4_title": "Requisiti di Sistema (PC)",
+    "game_s2_title": "Requisiti di Sistema (PC)",
     "game_req_min": "Minimi",
     "game_req_rec": "Consigliati",
     "game_req_os": "Windows 10 64-bit",
 "game_req_disk": "GB di spazio disponibile (attuali)",
     "game_req_disk_ssd": "GB di spazio disponibile (SSD consigliato)"
     ,
+    "story_page_title": "La Storia",
     "story_timeline_title": "Contesto Storico: 1943-1945",
     "story_tl1_title": "SETTEMBRE 1943: Nascita della Resistenza",
     "story_tl1_desc": "Dopo l'armistizio dell'8 Settembre, l'esercito italiano si dissolve. Le forze tedesche occupano il paese, dando inizio a due anni di brutale occupazione e guerra civile. I primi gruppi partigiani si formano spontaneamente sulle montagne piemontesi.",
@@ -87,6 +89,7 @@
     ,
     "support_title": "FINANZIA LA RESISTENZA",
     "support_text": "\"VIVA L'ITALIA\" è un progetto indipendente alimentato dalla passione. Ogni contributo, grande o piccolo, ci aiuta a dedicare più tempo e risorse allo sviluppo, migliorando la qualità del gioco e aggiungendo nuovi contenuti. Il tuo supporto è il nostro carburante.",
+    "support_dev_history": "Il progetto è nato nel {data_inizio_sviluppo} con budget zero: solo asset gratuiti, ricerca storica e tempo personale. Dopo {durata_sviluppo} di lavoro, ogni contributo paga il prossimo passo concreto dello sviluppo.",
     "support_cta": "Contribuisci ora",
     "support_thanks_donors": "Un ringraziamento speciale a tutti i nostri donatori. <a href=\"svizzeri.html\">Scoprili</a>.",
     "support_price_info": "Fino all'uscita nel 2030 (con Accesso Anticipato nel Q4 2027), puoi supportare lo sviluppo al prezzo speciale di <strong>{prezzo_contributo}</strong>. Al lancio, il prezzo finale sarà di <strong>{prezzo_finale}</strong>.",
@@ -109,7 +112,8 @@
     "milestone_4": "<span>{milestone_4_importo}<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
     "milestone_5": "<span>{milestone_5_importo}<br>Supporto mod</span>",
     "team_title": "SQUADRA DI SVILUPPO",
-    "team_member1_caption": "Appassionato di scienza, storia, statistica."
+    "team_member1_caption": "Appassionato di scienza, storia, statistica.",
+    "team_dev_history": "Sviluppo iniziato nel {data_inizio_sviluppo}: {durata_sviluppo} di lavoro indipendente, budget zero e nessun publisher."
     ,    
 
     "svizzeri_page_title":"Gli “Svizzeri”",

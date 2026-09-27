@@ -265,6 +265,18 @@
     margin-bottom: 9rem; /* Increased space below "FINANZIA LA RESISTENZA" */
 }
 
+/* Nota informativa sotto il titolo di una sezione (es. durata dello sviluppo) */
+.nota-sezione {
+    font-family: sans-serif;
+    text-align: center;
+    color: #a0aec0;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 700px;
+    /* compensa il margin-bottom del titolo (5rem) per tenere la nota vicina */
+    margin: -2.5rem auto 3.5rem auto;
+}
+
 /* Stile per il link nella sezione Supporto */
 .testo-ringraziamento-donatori {
     font-family: sans-serif;
