@@ -78,6 +78,7 @@
 <a href="https://forms.gle/eDA11S8yDmqAEyX37" 
    target="_blank" 
    rel="noopener noreferrer" 
+   data-form-supporto
    class="pulsante-cta">
    <span data-i18n-key="nav_acquista">Supporta ora</span>
 </a>
@@ -513,22 +514,24 @@
               class="barra-finanziamento-progresso"
               id="barra-progresso"
             ></div>
-    <div class="milestone" style="left: 2%" data-i18n-key="milestone_1">
+    <!-- Posizione (left) e importi delle milestone vengono riallineati da static/js/support.js
+         usando le costanti di static/data/crowdfunding.json: i valori qui sono il fallback senza JS -->
+    <div class="milestone" style="left: 2%" data-milestone-key="milestone_1" data-i18n-key="milestone_1">
       <span>1000€<br><small>Pubblicazione su Steam</small></span>
     </div>
-    <div class="milestone" style="left: 10%" data-i18n-key="milestone_3">
+    <div class="milestone" style="left: 10%" data-milestone-key="milestone_3" data-i18n-key="milestone_3">
       <span>5K€<br><small>Miglioramento modelli 3D</small></span>
     </div>
-    <div class="milestone" style="left: 25%" data-i18n-key="milestone_3b">
+    <div class="milestone" style="left: 25%" data-milestone-key="milestone_3b" data-i18n-key="milestone_3b">
       <span>12.5K€<br><small>Doppiaggio professionale</small></span>
     </div>
-    <div class="milestone milestone-verticale" style="left: 50%" data-i18n-key="milestone_4">
+    <div class="milestone milestone-verticale" style="left: 50%" data-milestone-key="milestone_4" data-i18n-key="milestone_4">
       <span>25K€<br><small>Espansione: le 4 giornate di Napoli con i femminielli</small></span>
     </div>
-    <div class="milestone milestone-sotto" style="left: 75%" data-i18n-key="milestone_2">
+    <div class="milestone milestone-sotto" style="left: 75%" data-milestone-key="milestone_2" data-i18n-key="milestone_2">
       <span>37.5K€<br><small>Creazione colonna sonora</small></span>
     </div>
-    <div class="milestone" style="left: 100%" data-i18n-key="milestone_5">
+    <div class="milestone" style="left: 100%" data-milestone-key="milestone_5" data-i18n-key="milestone_5">
       <span>50K€<br><small>Supporto mod</small></span>
     </div>
 </div>
@@ -541,8 +544,10 @@
           </p>
 
 
+          <!-- Il testo (prezzi inclusi) viene sostituito dalle traduzioni con i valori di
+               static/data/crowdfunding.json; quanto segue è il fallback senza JavaScript -->
           <p class="testo-prezzo-scontato" data-i18n-key="support_price_info">
-            Fino all'uscita nel 2027, puoi supportare lo sviluppo al prezzo
+            Fino all'uscita nel 2030 (con Accesso Anticipato nel Q4 2027), puoi supportare lo sviluppo al prezzo
             speciale di <strong>19,43€</strong>. Al lancio, il prezzo finale
             sarà di <strong>25,04€</strong>.
           </p>
@@ -579,7 +584,7 @@
       <div class="contenitore-footer">
         <div class="info-legali">
           <p data-i18n-key="footer_copyright">
-            &copy; 2025 Viva l'Italia. Tutti i diritti riservati.
+            &copy; 2026 Viva l'Italia. Tutti i diritti riservati.
           </p>
             <p><a href="privacy.html"><span data-i18n-key="footer_privacy_policy">INFORMATIVA SULLA PRIVACY</span></a></p>
           <p data-i18n-key="footer_disclaimer"></p>

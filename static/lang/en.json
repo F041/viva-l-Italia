@@ -46,7 +46,7 @@
     "media_img_bridge1_caption": "Bridge - view 1",
     "media_img_bridge2_caption": "Bridge - view 2",
     "media_img_bridge3_caption": "Bridge - view 3",
-    "footer_copyright": "© 2025 Viva l'Italia. All rights reserved.",
+    "footer_copyright": "© {year} Viva l'Italia. All rights reserved.",
     "footer_disclaimer": "This is a multidisciplinary project, with historical limitations and more.",
     "news_back_home": "← Back to Homepage",
     "news_read_more": "Read More",
@@ -88,7 +88,7 @@
     "support_text": "\"VIVA L'ITALIA\" is an independent project fueled by passion. Every contribution, big or small, helps us dedicate more time and resources to development, improving the game's quality and adding new content. Your support is our fuel.",
     "support_cta": "Contribute Now"   ,
     "support_thanks_donors": "A special thanks to all our donors. <a href=\"svizzeri.html\">Meet them</a>.",
-    "support_price_info": "Until the release in 2027, you can support development at the special price of <strong>€19.43</strong>. At launch, the final price will be <strong>€25.04</strong>.",
+    "support_price_info": "Until the release in 2030 (with Early Access in Q4 2027), you can support development at the special price of <strong>{prezzo_contributo}</strong>. At launch, the final price will be <strong>{prezzo_finale}</strong>.",
     "support_alt_contribution": "Want to contribute in other ways? We are always looking for 3D artists, musicians, and voice actors. <a href=\"mailto:info.vivalitalia@gmail.com\">Contact us</a>!",
     "shooting_gallery_title": "TEST YOURSELF"
     ,
@@ -102,12 +102,12 @@
     "minigame_hud_controls_unlock": "Unlock Mouse"
     ,
 
-    "milestone_1": "<span>€1000<br>Steam Release</span>",
-    "milestone_2": "<span>37.5K€<br>Soundtrack Release</span>",
-    "milestone_3": "<span>5K€<br>3D Models Upgrade</span>",
-    "milestone_3b": "<span>12.5K€<br>Professional Voice Acting</span>",
-    "milestone_4": "<span>25K€<br>Expansion: The 4 Days of Naples with 'femminielli'</span>",
-    "milestone_5": "<span>50K€<br>Modding Support</span>",
+    "milestone_1": "<span>{milestone_1_importo}<br>Steam Release</span>",
+    "milestone_2": "<span>{milestone_2_importo}<br>Soundtrack Release</span>",
+    "milestone_3": "<span>{milestone_3_importo}<br>3D Models Upgrade</span>",
+    "milestone_3b": "<span>{milestone_3b_importo}<br>Professional Voice Acting</span>",
+    "milestone_4": "<span>{milestone_4_importo}<br>Expansion: The 4 Days of Naples with 'femminielli'</span>",
+    "milestone_5": "<span>{milestone_5_importo}<br>Modding Support</span>",
     "team_title": "DEVELOPMENT TEAM",
     "team_member1_caption": "Passionate about science, history, and statistics."
     ,

@@ -1,0 +1,17 @@
+{
+  "prezzoContributo": 19.43,
+  "prezzoFinale": 25.04,
+  "obiettivoFinale": 50000,
+  "formUrlIT": "https://docs.google.com/forms/d/e/1FAIpQLSeFVVcPyeEjTpxi0AQTGsS3zAvPGHszouZFbRHGyh5gL5vN0A/viewform?usp=header",
+  "formUrlEN": "https://docs.google.com/forms/d/e/1FAIpQLSdRbYH4BVieqrLOuuAGLF7cY6v_3mIlf2iO-YEdFj8mHFyxTA/viewform?usp=dialog",
+  "formUrlShort": "https://forms.gle/eDA11S8yDmqAEyX37",
+  "milestones": [
+    { "key": "milestone_1", "target": 1000 },
+    { "key": "milestone_3", "target": 5000 },
+    { "key": "milestone_3b", "target": 12500 },
+    { "key": "milestone_4", "target": 25000 },
+    { "key": "milestone_2", "target": 37500 },
+    { "key": "milestone_5", "target": 50000 }
+  ]
+}
+

@@ -247,19 +247,114 @@ document.addEventListener('keydown', (e) => {
     const supportedLangs = ['it', 'en'];
     const defaultLang = 'it';
 
+    // Lingua attualmente applicata alla pagina
+    let linguaCorrente = defaultLang;
+
+    // Costanti del crowdfunding (prezzi, obiettivo, milestone, link ai form),
+    // caricate una sola volta da static/data/crowdfunding.json
+    let configCrowdfunding = null;
+    let promessaConfigCrowdfunding = null;
+
     const loadTranslations = async (lang) => {
         const response = await fetch(`./static/lang/${lang}.json`);
         if (!response.ok) throw new Error(`File di traduzione non trovato: ${lang}.json`);
         translations = await response.json();
     };
 
+    const caricaConfigCrowdfunding = () => {
+        if (!promessaConfigCrowdfunding) {
+            promessaConfigCrowdfunding = fetch('./static/data/crowdfunding.json')
+                .then(response => {
+                    if (!response.ok) throw new Error(`status ${response.status}`);
+                    return response.json();
+                })
+                .then(config => {
+                    configCrowdfunding = config;
+                    window.crowdfundingConfig = config;
+                    return config;
+                })
+                .catch(error => {
+                    console.warn('Impossibile caricare static/data/crowdfunding.json:', error);
+                    return null;
+                });
+        }
+        return promessaConfigCrowdfunding;
+    };
+    // Esposta per gli altri script (es. support.js) così da condividere una sola richiesta
+    window.caricaConfigCrowdfunding = caricaConfigCrowdfunding;
+
+    // Formattatori: due decimali per i prezzi, forma compatta per le milestone
+    const formattaPrezzo = (valore, lang) => {
+        const numero = valore.toFixed(2);
+        return lang === 'en' ? `€${numero}` : `${numero.replace('.', ',')}€`;
+    };
+
+    const formattaImportoLivello = (valore, lang) => {
+        let numero;
+        if (valore >= 5000) {
+            const migliaia = valore / 1000;
+            numero = `${Number.isInteger(migliaia) ? migliaia : migliaia.toFixed(1)}K`;
+        } else {
+            numero = `${valore}`;
+        }
+        return lang === 'en' ? `€${numero}` : `${numero}€`;
+    };
+
+    // Valori con cui sostituire i segnaposto {nome} presenti nelle traduzioni
+    const costruisciSegnaposto = () => {
+        const segnaposto = { year: new Date().getFullYear() };
+
+        if (configCrowdfunding) {
+            if (typeof configCrowdfunding.prezzoContributo === 'number') {
+                segnaposto.prezzo_contributo = formattaPrezzo(configCrowdfunding.prezzoContributo, linguaCorrente);
+            }
+            if (typeof configCrowdfunding.prezzoFinale === 'number') {
+                segnaposto.prezzo_finale = formattaPrezzo(configCrowdfunding.prezzoFinale, linguaCorrente);
+            }
+            if (typeof configCrowdfunding.obiettivoFinale === 'number') {
+                segnaposto.obiettivo = formattaImportoLivello(configCrowdfunding.obiettivoFinale, linguaCorrente);
+            }
+
+            (configCrowdfunding.milestones || []).forEach(milestone => {
+                if (milestone && milestone.key && typeof milestone.target === 'number') {
+                    segnaposto[`${milestone.key}_importo`] = formattaImportoLivello(milestone.target, linguaCorrente);
+                }
+            });
+        }
+
+        return segnaposto;
+    };
+
+    const SEGNAPOSTO_REGEX = /\{(\w+)\}/g;
+
+    // Un segnaposto è "dinamico" se dipende dalle costanti del crowdfunding
+    const dipendeDaConfig = (nome) => nome.startsWith('prezzo_') || nome === 'obiettivo' || nome.endsWith('_importo');
+
     const translatePage = () => {
+        const segnaposto = costruisciSegnaposto();
+        let serveConfig = false;
+
         document.querySelectorAll('[data-i18n-key]').forEach(element => {
             const key = element.getAttribute('data-i18n-key');
-            if (translations[key]) {
-                element.innerHTML = translations[key];
-            }
+            if (!translations[key]) return;
+
+            element.innerHTML = translations[key].replace(SEGNAPOSTO_REGEX, (match, nome) => {
+                if (Object.prototype.hasOwnProperty.call(segnaposto, nome)) {
+                    return segnaposto[nome];
+                }
+                if (dipendeDaConfig(nome) && !configCrowdfunding) {
+                    serveConfig = true;
+                }
+                return match;
+            });
         });
+
+        // Le costanti non erano ancora disponibili: le carichiamo e ritraduciamo la pagina
+        if (serveConfig) {
+            caricaConfigCrowdfunding().then(config => {
+                if (config) translatePage();
+            });
+        }
     };
     window.translatePage = translatePage;
     
@@ -272,23 +367,43 @@ document.addEventListener('keydown', (e) => {
         });
     };
     
+    // Riallinea i link ai form di supporto alle costanti del crowdfunding:
+    // il pulsante della sezione supporto cambia in base alla lingua, mentre i
+    // pulsanti di navigazione usano il link breve (data-form-supporto).
+    const aggiornaLinkFormSupporto = () => {
+        if (!configCrowdfunding) return;
+
+        const pulsanteSupporto = document.querySelector('.pulsante-cta-supporto');
+        if (pulsanteSupporto) {
+            const urlLingua = linguaCorrente === 'en' ? configCrowdfunding.formUrlEN : configCrowdfunding.formUrlIT;
+            if (urlLingua) {
+                pulsanteSupporto.href = urlLingua;
+            }
+        }
+
+        if (configCrowdfunding.formUrlShort) {
+            document.querySelectorAll('[data-form-supporto]').forEach(link => {
+                link.href = configCrowdfunding.formUrlShort;
+            });
+        }
+    };
+
     const setLanguage = async (lang) => {
         try {
             await loadTranslations(lang);
+            linguaCorrente = lang;
             translatePage();
             updateLangSelector(lang);
 
-            // Logica per cambiare il link del form di supporto
-            const pulsanteSupporto = document.querySelector('.pulsante-cta-supporto');
-            if (pulsanteSupporto) {
-                const linkFormIT = "https://docs.google.com/forms/d/e/1FAIpQLSeFVVcPyeEjTpxi0AQTGsS3zAvPGHszouZFbRHGyh5gL5vN0A/viewform?usp=header";
-                const linkFormEN = "https://docs.google.com/forms/d/e/1FAIpQLSdRbYH4BVieqrLOuuAGLF7cY6v_3mIlf2iO-YEdFj8mHFyxTA/viewform?usp=dialog";
-
-                if (lang === 'en') {
-                    pulsanteSupporto.href = linkFormEN;
-                } else {
-                    pulsanteSupporto.href = linkFormIT;
-                }
+            // Link ai form di supporto: dipendono dalla lingua e dalle costanti del crowdfunding
+            const serveConfigPerLink = document.querySelector('[data-form-supporto], .pulsante-cta-supporto');
+            if (serveConfigPerLink && !configCrowdfunding) {
+                caricaConfigCrowdfunding().then(() => {
+                    aggiornaLinkFormSupporto();
+                    translatePage();
+                });
+            } else {
+                aggiornaLinkFormSupporto();
             }
 
             localStorage.setItem('userLanguage', lang);

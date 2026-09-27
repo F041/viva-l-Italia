@@ -46,7 +46,7 @@
     "media_img_bridge1_caption": "Ponte - visuale 1",
     "media_img_bridge2_caption": "Ponte - visuale 2",
     "media_img_bridge3_caption": "Ponte - visuale 3",
-    "footer_copyright": "© 2025 Viva l'Italia. Tutti i diritti riservati.",
+    "footer_copyright": "© {year} Viva l'Italia. Tutti i diritti riservati.",
     "footer_disclaimer": "Questo è un progetto multidisciplinare, con limitazioni storiche e non solo."
     ,
     "news_back_home": "← Torna alla Homepage",
@@ -89,7 +89,7 @@
     "support_text": "\"VIVA L'ITALIA\" è un progetto indipendente alimentato dalla passione. Ogni contributo, grande o piccolo, ci aiuta a dedicare più tempo e risorse allo sviluppo, migliorando la qualità del gioco e aggiungendo nuovi contenuti. Il tuo supporto è il nostro carburante.",
     "support_cta": "Contribuisci ora",
     "support_thanks_donors": "Un ringraziamento speciale a tutti i nostri donatori. <a href=\"svizzeri.html\">Scoprili</a>.",
-    "support_price_info": "Fino all'uscita nel 2027, puoi supportare lo sviluppo al prezzo speciale di <strong>19,43€</strong>. Al lancio, il prezzo finale sarà di <strong>25,04€</strong>.",
+    "support_price_info": "Fino all'uscita nel 2030 (con Accesso Anticipato nel Q4 2027), puoi supportare lo sviluppo al prezzo speciale di <strong>{prezzo_contributo}</strong>. Al lancio, il prezzo finale sarà di <strong>{prezzo_finale}</strong>.",
     "support_alt_contribution": "Vuoi contribuire in altri modi? Siamo sempre alla ricerca di artisti 3D, musicisti, e doppiatori. <a href=\"mailto:info.vivalitalia@gmail.com\">Contattaci</a>!",
     "shooting_gallery_title": "METTITI ALLA PROVA"
     ,
@@ -102,12 +102,12 @@
     "minigame_hud_controls_eliminate": "Elimina",
     "minigame_hud_controls_unlock": "Sblocca Mouse"
     ,
-    "milestone_1": "<span>1000€<br>Pubblicazione su Steam</span>",
-    "milestone_2": "<span>37.5K€<br>Creazione colonna sonora</span>",
-    "milestone_3": "<span>5K€<br>Miglioramento modelli 3D</span>",
-    "milestone_3b": "<span>12.5K€<br>Doppiaggio professionale</span>",
-    "milestone_4": "<span>25K€<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
-    "milestone_5": "<span>50K€<br>Supporto mod</span>",
+    "milestone_1": "<span>{milestone_1_importo}<br>Pubblicazione su Steam</span>",
+    "milestone_2": "<span>{milestone_2_importo}<br>Creazione colonna sonora</span>",
+    "milestone_3": "<span>{milestone_3_importo}<br>Miglioramento modelli 3D</span>",
+    "milestone_3b": "<span>{milestone_3b_importo}<br>Doppiaggio professionale</span>",
+    "milestone_4": "<span>{milestone_4_importo}<br>Espansione: le 4 giornate di Napoli con i femminielli</span>",
+    "milestone_5": "<span>{milestone_5_importo}<br>Supporto mod</span>",
     "team_title": "SQUADRA DI SVILUPPO",
     "team_member1_caption": "Appassionato di scienza, storia, statistica."
     ,    
